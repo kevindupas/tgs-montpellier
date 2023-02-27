@@ -6,7 +6,6 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import BeforeFooter from '../components/BeforeFooter';
 import Loader from '../components/Loader';
 import { URL } from '../utils/config';
 
@@ -100,7 +99,7 @@ export default function FaqDetails() {
                         </div>
                     </div>
                 </section>
-                <BeforeFooter />
+                {/* <BeforeFooter /> */}
             </div>
         );
     }

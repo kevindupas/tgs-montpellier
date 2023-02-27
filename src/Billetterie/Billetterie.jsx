@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import React from 'react';
-import BeforeFooter from '../components/BeforeFooter';
 import CategoryImage from '../components/CategoryImage';
 import Loader from '../components/Loader';
 import { useSettings } from '../context/SettingContext';
@@ -79,7 +78,7 @@ export default function Billetterie() {
                         </div>
                     </section>
                 </div>
-                <BeforeFooter />
+                {/* <BeforeFooter /> */}
             </>
 
         );

@@ -177,9 +177,9 @@ export default function Card({ menuPosts }) {
                                                         </li> */}
                                             </div>
                                         </p>
-                                        <Link className="news-card__read-more" to={`/post/${value.id}`}>
+                                        <Link className="news-card__read-more text-red-600" to={`/post/${value.id}`}>
                                             En savoir plus
-                                            <i className="fas fa-long-arrow-alt-right" />
+                                            <i className="fas fa-long-arrow-alt-right text-red-600" />
                                         </Link>
                                     </div>
                                 </div>

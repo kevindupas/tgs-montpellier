@@ -11,7 +11,7 @@ export default function Informations() {
         <section className="relative py-16 bg-[url('/dist/images/pattern-semi-dark.png')] sm:py-20 lg:py-24">
 
             <div className="max-w-[1200px] mx-8 lg:mx-auto">
-                <h2 className="text-white font-microgramma font-bold text-xl lg:text-4xl uppercase tracking-wide mb-12 text-center">Organisez-vous pour ne rien rater !</h2>
+                <h2 className="text-white font-heading_bold font-bold text-xl lg:text-4xl uppercase tracking-wide mb-12 text-center">Organisez-vous pour ne rien rater !</h2>
                 <div className="grid grid-cols-2 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
                     <Link to="faqs" className="w-full bg-orange-700 hover:scale-105 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">

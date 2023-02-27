@@ -4,7 +4,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import BeforeFooter from '../components/BeforeFooter';
+// import BeforeFooter from '../components/BeforeFooter';
+import clsx from 'clsx';
 import { INFOS_PRATIQUES_CATEGORY, SALON_ID, URL } from '../utils/config';
 import Loader from '../components/Loader';
 import CategoryImage from '../components/CategoryImage';
@@ -38,6 +39,9 @@ export default function InfosPratiques() {
                 },
             );
     }, []);
+
+    console.log(infos);
+
     if (error) {
         return (
             <div>
@@ -59,7 +63,7 @@ export default function InfosPratiques() {
                         <div className="flex flex-wrap mt-[-20px] ml-[-20px]">
                             {infos.map((value) => (
                                 <article key={value.id} className="pt-[20px] pl-[20px] w-full lg:w-1/3 lg:basis-auto text-black">
-                                    <div className="bg-yellow-50 py-[15px] px-[30px] w-auto h-80 mx-auto my-0">
+                                    <div className="py-[15px] px-[30px] w-auto h-80 mx-auto my-0 bg-zinc-200">
                                         <div className="flex items-center flex-col">
                                             <img src={URL + value.icone} alt="" className="flex justify-center items-center w-[60px] h-[60px]" />
                                             <h1 className="text-5xl mt-4 text-center font-tungstenb_semibold tracking-[0.566667px] leading-[.95] uppercase">{value.name}</h1>
@@ -69,7 +73,7 @@ export default function InfosPratiques() {
                                             <p>{value.mini_content}</p>
                                         </div>
                                         <div className="flex items-center justify-center">
-                                            <Link key={value.id} to={`/info/${value.id}`} className="mt-4 text-sm flex items-end font-bold uppercase hover:text-orange-500 hover:scale-125">
+                                            <Link key={value.id} to={`/info/${value.id}`} className="mt-4 text-sm flex items-end font-bold uppercase hover:text-red-500 hover:scale-125">
                                                 Lire la suite
                                             </Link>
                                         </div>
@@ -79,7 +83,7 @@ export default function InfosPratiques() {
                         </div>
                     </div>
                 </section>
-                <BeforeFooter />
+                {/* <BeforeFooter /> */}
             </>
         );
     }

@@ -55,12 +55,12 @@ export default function Infos() {
                         MEETT
                     </p> */}
                     {' '}
-                    <h1 className="discoverTitle font-microgramma tracking-[0.566667px] leading-[.95] uppercase text-white">
+                    <h1 className="text-6xl font-heading_bold leading-[1.20] uppercase text-white -mt-24">
                         {settings.title_discover}
                     </h1>
                     {/* <hr className="relative -left-10 w-[calc(100% + 130px)] mb-2 w-96 border-black" /> */}
                     {' '}
-                    <p className="discoverText">
+                    <p className="discoverText font-bold pt-4">
                         {settings.content_discover}
                     </p>
                 </div>
@@ -78,8 +78,8 @@ export default function Infos() {
                     </div>
                     {' '}
                     <div className="discoverWrapButton">
-                        <a href="https://gallery.tgs-production.fr" target="_blank" className="wrapButton bg-white" rel="noreferrer">
-                            <span className="text-black font-semibold uppercase">Découvrir</span>
+                        <a href="https://www.youtube.com/@tgsevenements" target="_blank" className="wrapButton bg-white" rel="noreferrer">
+                            <span className="text-black font-bold uppercase">Découvrir</span>
                             {' '}
                         </a>
                     </div>

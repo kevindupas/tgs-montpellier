@@ -45,21 +45,21 @@ function ProgrammesHome({
                         <div className="mr-0 relative z-10 text-white">
 
                             {/* <p className="text-base mb-2 ml-28 font-semibold uppercase">artistes</p> */}
-                            <h1 className="mb-2 text-center font-microgramma text-[40px] lg:text-[48px] tracking-[0.566667px] leading-[.95] uppercase">Programmes</h1>
+                            <h1 className="mb-2 text-center font-heading_bold text-[40px] lg:text-[40px] tracking-[0.566667px] leading-[.95] uppercase">Programmes</h1>
                             <hr className="relative lg:left-0 w-[calc(100% + 130px)] my-4" />
 
                             <table className="min-w-full">
                                 <tbody>
                                     <tr>
-                                        <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste text-[40px] lg:text-[68px] font-microgramma tracking-[0.566667px] leading-[.95] uppercase">400</td>
+                                        <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste text-[40px] lg:text-[68px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">400</td>
                                         <td className="whitespace-nowrap px-3 pt-[25px] text-sm text-white flex-shrink-0 font-tungstenb_semibold font-semibold text-[45px] tracking-[0.566667px] leading-[.95] uppercase">exposants</td>
                                     </tr>
                                     <tr>
-                                        <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste text-[40px] lg:text-[68px] font-microgramma tracking-[0.566667px] leading-[.95] uppercase">{ settings.associations }</td>
+                                        <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste text-[40px] lg:text-[68px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">{ settings.associations }</td>
                                         <td className="whitespace-nowrap px-3 pt-[25px] text-sm text-white flex-shrink-0 font-tungstenb_semibold font-semibold text-[45px] tracking-[0.566667px] leading-[.95] uppercase">associations</td>
                                     </tr>
                                     <tr>
-                                        <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste text-[40px] lg:text-[68px] font-microgramma tracking-[0.566667px] leading-[.95] uppercase">{ settings.animations }</td>
+                                        <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste text-[40px] lg:text-[68px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">{ settings.animations }</td>
                                         <td className="whitespace-nowrap px-3 pt-[25px] text-sm text-white flex-shrink-0 font-tungstenb_semibold font-semibold text-[45px] tracking-[0.566667px] leading-[.95] uppercase">animations</td>
                                     </tr>
                                 </tbody>

@@ -11,7 +11,7 @@ export default function Video({
     return (
         <section className="relative h-[calc(100vh-80px)]">
             <div className="relative z-10 max-w-[1200px] mx-auto h-full content-end flex items-center flex-row-reverse">
-                <h1 className="text-white font-microgramma tracking-[0.566667px] leading-[.95] indent-0 uppercase mr-4 lg:mr-0 text-5xl lg:text-7xl fix-width">
+                <h1 className="text-white font-heading_bold tracking-[0.566667px] leading-[.95] indent-0 uppercase mr-4 lg:mr-0 text-5xl lg:text-6xl fix-width">
                     <span
                         className="drop-shadow-2xl"
                         style={{

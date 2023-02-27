@@ -32,7 +32,7 @@ const breakPoints = [
     },
     {
         width:       768,
-        itemsToShow: 2,
+        itemsToShow: 3,
     },
     {
         width:       1200,

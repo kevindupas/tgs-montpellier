@@ -1,24 +1,21 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable no-unused-vars */
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-console */
-// noinspection JSValidateTypes
+import { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 import dayjs from 'dayjs';
 import React, { useEffect, useState } from 'react';
 // import { usePostHome } from '../context/PostHomeContext';
 import { Link } from 'react-router-dom';
-import Carousel from '../../components/Carousel';
 import { URL } from '../../utils/config';
-import { useSettings } from '../../context/SettingContext';
 
-export default function InvitesHome({
+export default function SwiperTest({
     category,
     salon,
-    tag,
     limit,
 }) {
-    const { settings } = useSettings();
     const [invites, setInvites] = useState([]);
     // const [storage, setStorage] = useLocalStorage('invitesHome', null);
 
@@ -34,55 +31,27 @@ export default function InvitesHome({
         fetchData()
             .then((r) => r);
     }, []);
-
     return (
-    // TODO: Modifier les nombres dans l'admin salon
-        <section className="relative w-full py-16 bg-zinc-900">
 
-            <div className="max-w-[1200px] w-[calc(100%-30px)] mx-auto flex justify-start items-start flex-wrap">
-
-                <div className="mx-auto max-w-2xl mb-10">
-                    <h1 className="mb-2 text-center font-heading_bold text-[40px] lg:text-[48px] tracking-[0.566667px] leading-[.95] uppercase text-white">Invités</h1>
-                    <hr className="relative lg:left-0 w-[calc(100% + 130px)]" />
-                </div>
-                {/* <div className="mx-auto">
-
-                        <div className="mr-0 relative z-10 text-white">
-
-                            <h1 className="mb-2 text-center font-microgramma text-[40px] lg:text-[54px] tracking-[0.566667px] leading-[.95] uppercase">Invités</h1>
-                            <hr className="relative lg:left-0 w-[calc(100% + 130px)] my-4" />
-                            <table className="min-w-full justify-center items-center">
-                                <tbody>
-                                    <tr>
-                                        <td className="whitespace-nowrap py-4 pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste text-[40px] lg:text-[68px] font-microgramma tracking-[0.566667px] leading-[.95] uppercase">{ settings.halls }</td>
-                                        <td className="whitespace-nowrap px-3 py-4 pt-[25px] text-sm text-white flex-shrink-0 font-tungstenb_semibold font-semibold text-[45px] tracking-[0.566667px] leading-[.95] uppercase">halls</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-
-                        <div className="py-[30px] lg:py-[43px] flex justify-center items-center">
-                            <Link to="invites" className="inline-block text-center cursor-pointer bg-white py-5 px-11">
-                                <span className="text-black uppercase font-semibold">Liste complète</span>
-                                {' '}
-                            </Link>
-                        </div>
-
-                    </div> */}
-                <div
-                    className="w-full lg:w-full h-full flex mx-auto justify-center items-center relative"
+        <div className="spring-slider">
+            <div className="swiper">
+                <Swiper
+                    slidesPerView={4}
+                    spaceBetween={30}
+                    centeredSlides
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Pagination]}
+                    className="mySwiper"
                 >
-                    {/* <button type="button" onClick={() => inputEl.slidePrev()}>Prev</button>
-                        <button type="button" onClick={() => inputEl.slideNext()}>Next</button> */}
-                    <Carousel>
-                        {invites && invites.map((data) => {
-                            if (data.forward === true && data.published_at !== null && data.published_at < dayjs().format('YYYY-MM-DD H:s')) {
-                                return (
-
+                    {invites && invites.map((data) => {
+                        if (data.forward === true && data.published_at !== null && data.published_at < dayjs().format('YYYY-MM-DD H:s')) {
+                            return (
+                                <SwiperSlide>
                                     <Link className="mx-4" key={data.id} to={`/post/${data.id}`}>
                                         <div className="news-card">
-                                            <img src={URL + data.image} alt={data.name} className="news-card__image" />
+                                            <img src="https://admin.tgs-production.fr/storage/files/1/Invit%C3%A9s/Ste%CC%81phane%20Excoffier.jpeg" alt={data.name} className="news-card__image" />
                                             <div className="news-card__text-wrapper w-full">
                                                 <h2 className="news-card__title">{data.name}</h2>
                                                 <div className="news-card__post-date">{data.tag.name}</div>
@@ -219,26 +188,16 @@ export default function InvitesHome({
                                             </div>
                                         </div>
                                     </Link>
+                                </SwiperSlide>
+                            );
+                        }
 
-                                );
-                            }
-
-                            return null;
-                        })}
-                        <Link className="mx-4" to="invites">
-                            <div className="news-card">
-                                <img src="/dist/images/more.png" alt="dd" className="news-card__image" />
-                                <div className="news-card__text-wrapper w-full">
-                                    <h2 className="news-card__title">Voir plus d'invités</h2>
-                                    {/* <div className="news-card__post-date">effez</div> */}
-                                </div>
-                            </div>
-                        </Link>
-                    </Carousel>
-
-                </div>
-
+                        return null;
+                    })}
+                </Swiper>
             </div>
-        </section>
+
+        </div>
+
     );
 }

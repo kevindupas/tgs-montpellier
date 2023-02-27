@@ -3,7 +3,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import BeforeFooter from '../components/BeforeFooter';
 import { FAQ_CATEGORY, SALON_ID, URL } from '../utils/config';
 import Loader from '../components/Loader';
 import CategoryImage from '../components/CategoryImage';
@@ -79,7 +78,7 @@ export default function Faq() {
                         </div>
                     </div>
                 </section>
-                <BeforeFooter />
+                {/* <BeforeFooter /> */}
             </>
         );
     }

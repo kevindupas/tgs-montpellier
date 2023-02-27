@@ -12,7 +12,7 @@ import Carousel from '../../components/Carousel';
 import { URL } from '../../utils/config';
 import { useSettings } from '../../context/SettingContext';
 
-export default function InvitesHome({
+export default function ProgrammeTest({
     category,
     salon,
     tag,
@@ -42,7 +42,7 @@ export default function InvitesHome({
             <div className="max-w-[1200px] w-[calc(100%-30px)] mx-auto flex justify-start items-start flex-wrap">
 
                 <div className="mx-auto max-w-2xl mb-10">
-                    <h1 className="mb-2 text-center font-heading_bold text-[40px] lg:text-[48px] tracking-[0.566667px] leading-[.95] uppercase text-white">Invités</h1>
+                    <h1 className="mb-2 text-center font-heading_bold text-[40px] lg:text-[48px] tracking-[0.566667px] leading-[.95] uppercase text-white">Programmes</h1>
                     <hr className="relative lg:left-0 w-[calc(100% + 130px)]" />
                 </div>
                 {/* <div className="mx-auto">
@@ -225,11 +225,11 @@ export default function InvitesHome({
 
                             return null;
                         })}
-                        <Link className="mx-4" to="invites">
+                        <Link className="mx-4" to="programmes">
                             <div className="news-card">
-                                <img src="/dist/images/more.png" alt="dd" className="news-card__image" />
+                                <img src="/dist/images/more-pro.png" alt="dd" className="news-card__image" />
                                 <div className="news-card__text-wrapper w-full">
-                                    <h2 className="news-card__title">Voir plus d'invités</h2>
+                                    <h2 className="news-card__title">Voir plus de programmes</h2>
                                     {/* <div className="news-card__post-date">effez</div> */}
                                 </div>
                             </div>

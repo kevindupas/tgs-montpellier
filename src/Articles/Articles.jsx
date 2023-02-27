@@ -3,7 +3,6 @@
 /* eslint-disable no-unused-vars */
 import clsx from 'clsx';
 import React, { useEffect, useState } from 'react';
-import BeforeFooter from '../components/BeforeFooter';
 import CategoryImage from '../components/CategoryImage';
 import Loader from '../components/Loader';
 import { SALON_ID, URL } from '../utils/config';
@@ -97,7 +96,7 @@ export default function Articles({ categoryName, categories }) {
                         </div>
                     </section>
                 </div>
-                <BeforeFooter />
+                {/* <BeforeFooter /> */}
             </>
         );
     }

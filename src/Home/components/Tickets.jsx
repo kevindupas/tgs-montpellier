@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable no-shadow */
+import clsx from 'clsx';
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Loader from '../../components/Loader';
@@ -56,7 +57,7 @@ export default function Tickets() {
             <div className="overflow-hidden bg-[url('/dist/images/pattern-dark.jpeg')] bg-repeat">
                 <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
                     <div className="sm:flex sm:flex-col sm:align-center">
-                        <h1 className="text-5xl font-extrabold text-white sm:text-center uppercase">
+                        <h1 className="text-3xl font-extrabold text-white sm:text-center uppercase font-heading_bold">
                             Achetez vos billets dès
                             maintenant !
                         </h1>
@@ -64,66 +65,12 @@ export default function Tickets() {
                     <div
                         className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-5"
                     >
-
-                        {/* <div className="border-2 border-gray-200 bg-black rounded-lg shadow-sm divide-y divide-black scale-100 hover:scale-110 ease-in duration-200">
-                            <div className="p-6">
-                                <h2 className="text-lg leading-6 font-semibold text-white uppercase">1 Jour</h2>
-                                <p className="mt-4">
-                                    <span className="text-4xl font-extrabold text-white">€ 18</span>
-                                </p>
-                                <Link
-                                    to="billeterie"
-                                    className="mt-8 block w-full bg-orange-600 hover:bg-orange-700 rounded-md py-2 text-sm font-semibold text-white text-center"
-                                >
-                                    Réserver
-                                </Link>
-                            </div>
-                            <div className="py-4 px-6">
-                                <ul className="space-y-4">
-                                    <li className="flex space-x-3">
-
-                                        <svg
-                                            className="flex-shrink-0 h-5 w-5 text-green-500"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
-                                        <span className="text-sm text-white">Accès au salon : 1 jours</span>
-                                    </li>
-
-                                    <li className="flex space-x-3">
-
-                                        <svg
-                                            className="flex-shrink-0 h-5 w-5 text-green-500"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
-                                        <span className="text-sm text-white">Entrée à partir de 9h30</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> */}
-
                         {
                             prices && (
                                 <>
                                     {prices.map((price) => (
-                                        <div key={price.id} className="border-2 border-white bg-gray-100 rounded-lg shadow-sm divide-y divide-gray-200 scale-100 hover:scale-110 ease-in duration-200">
+                                        <div key={price.id} className={clsx('border-2 bg-gray-100 rounded-lg shadow-sm scale-100 hover:scale-110 ease-in duration-200', price.name === 'VIP' ? 'border-red-500' : '')}>
+                                            { price.name === 'VIP' && (<span className="absolute flex -top-3 rounded-full px-3 left-0 w-36 right-0 mx-auto justify-center items-center text-white bg-orange-500">Quantité limitée</span>) }
                                             <div className="p-6">
                                                 <h2 className="text-lg leading-6 font-medium text-black uppercase text-center">{price.name}</h2>
                                                 <p className="mt-4 text-center">
@@ -132,26 +79,41 @@ export default function Tickets() {
                                                         €
                                                     </span>
                                                 </p>
-                                                { location.pathname !== '/billetterie' ? (
-                                                    <Link
-                                                        to="billetterie"
-                                                        className="mt-8 block w-full bg-orange-600 hover:bg-orange-700 rounded-md py-2 text-sm font-semibold text-white text-center"
-                                                    >
-                                                        Réserver
+                                                {
+                                                    price.sold_out !== true ? (
+                                                        <div>
+                                                            { location.pathname !== '/billetterie' ? (
+                                                                <Link
+                                                                    to="billetterie"
+                                                                    className="mt-8 block w-full bg-orange-600 hover:bg-orange-700 rounded-md py-2 text-sm font-semibold text-white text-center"
+                                                                >
+                                                                    Réserver
 
-                                                    </Link>
+                                                                </Link>
 
-                                                )
+                                                            )
 
-                                                    : (
-                                                        <a
-                                                            href="#div_id"
-                                                            className="mt-8 block w-full bg-orange-600 hover:bg-orange-700 rounded-md py-2 text-sm font-semibold text-white text-center"
+                                                                : (
+                                                                    <a
+                                                                        href="#div_id"
+                                                                        className="mt-8 block w-full bg-orange-600 hover:bg-orange-700 rounded-md py-2 text-sm font-semibold text-white text-center"
+                                                                    >
+                                                                        Réserver
+
+                                                                    </a>
+                                                                )}
+
+                                                        </div>
+
+                                                    ) : (
+                                                        <span
+                                                            className="mt-8 block w-full bg-gray-600 hover:bg-gray-700 rounded-md py-2 text-sm font-semibold text-white text-center"
                                                         >
-                                                            Réserver
+                                                            Sold out
 
-                                                        </a>
-                                                    )}
+                                                        </span>
+                                                    )
+                                                }
                                             </div>
                                             <div className="py-4 px-6">
                                                 {/* <h3 className="text-xs font-medium text-white tracking-wide uppercase">Whats included</h3> */}

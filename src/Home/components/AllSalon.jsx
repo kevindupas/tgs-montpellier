@@ -47,12 +47,12 @@ export default function AllSalon() {
     } if (allSalon) {
         return (
 
-            <div className="bg-[url('/dist/images/pattern-light.jpg')] bg-repeat">
+            <div className="bg-zinc-300 bg-repeat">
                 <div className="mx-auto max-w-7xl py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
                     <div className="space-y-8 sm:space-y-12">
                         <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-                            <h2 className="text-4xl text-black font-bold font-microgramma tracking-[0.566667px] leading-[.95] uppercase">Nos events</h2>
-                            <p className="text-xl text-gray-500">Retrouvez nos autres salons.</p>
+                            <h2 className="text-4xl text-black font-bold font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">Nos events</h2>
+                            <p className="text-xl text-gray-500 font-bold">Retrouvez nos autres salons.</p>
                         </div>
                         <div className="mx-auto grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-3">
                             {allSalon.map((value) => {
@@ -60,10 +60,10 @@ export default function AllSalon() {
                                     return (
                                         <a href="/" key={value.id}>
                                             <div className="space-y-4">
-                                                <img className="mx-auto w-36 h-auto lg:w-44 lg:h-full" src={URL + value.logo} alt="" />
+                                                <img className="mx-auto w-44 h-auto lg:w-44 lg:h-full" src={URL + value.logo} alt="" />
                                                 <div className="space-y-2">
                                                     <div className="text-xs font-medium lg:text-sm">
-                                                        <h3>{value.event_date}</h3>
+                                                        <h3 className="font-bold">{value.event_date}</h3>
                                                     </div>
                                                 </div>
                                             </div>

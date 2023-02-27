@@ -5,15 +5,15 @@ import Video from './components/Video';
 import InvitesHome from './components/InvitesHome';
 import Countdown from './components/Countdown';
 import Salon from './components/Salon';
-import ProgrammesHome from './components/ProgrammesHome';
 import Words from './components/Words';
 import Tickets from './components/Tickets';
-import Informations from './components/Informations';
 import Newsletter from './components/Newsletter';
-import BeforeFooter from '../components/BeforeFooter';
 import AllSalon from './components/AllSalon';
-import Partners from './components/Partners';
 import Infos from './components/Infos';
+import InformationTest from './components/InformationTest';
+import PartnerTest from './components/PartnerTest';
+import ProgrammeTest from './components/ProgrammeTest';
+import { SALON_ID } from '../utils/config';
 
 export default function Home() {
     // const { settings } = useSettings();
@@ -27,25 +27,25 @@ export default function Home() {
                     source="/dist/video/home-intro-convert.mp4"
                 />
                 <Countdown />
-                <Informations />
+                <InformationTest />
                 <InvitesHome
                     category={1}
-                    salon={1}
+                    salon={SALON_ID}
                     limit={5}
                 />
                 <Salon />
-                <ProgrammesHome
+                <ProgrammeTest
                     category={2}
-                    salon={1}
+                    salon={SALON_ID}
                     limit={5}
                 />
                 <Words />
                 <Tickets />
                 <Infos />
-                <Partners />
+                <PartnerTest />
                 <AllSalon />
                 <Newsletter />
-                <BeforeFooter />
+                {/* <BeforeFooter /> */}
 
             </main>
         </div>

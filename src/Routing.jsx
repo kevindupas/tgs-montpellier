@@ -12,7 +12,7 @@ import NotFound from './NotFound/NotFound';
 import InfosPratiques from './InfosPratiques/InfosPratiques';
 import InfosPratiquesDetails from './InfosPratiques/InfosPratiquesDetails';
 import ScrollToTop from './utils/ScrollToTop';
-import Faq from './Faq/Faq';
+// import Faq from './Faq/Faq';
 import FaqDetails from './Faq/FaqDetails';
 import Articles from './Articles/Articles';
 import ArticlesDetails from './Articles/ArticlesDetails';
@@ -24,6 +24,7 @@ import {
 import MentionLegale from './Terms/MentionLegale';
 import ConditionGeneral from './Terms/ConditionGeneral';
 import Mosaic from './Mosaic/Mosaic';
+import FaqWithSearch from './Faq/FaqWithSearch';
 
 export default function Routing() {
     const [navbarOpen, setNavbarOpen] = useState(false);
@@ -90,7 +91,7 @@ export default function Routing() {
                 <Route
                     path="faqs"
                     element={(
-                        <Faq
+                        <FaqWithSearch
                             categories={FAQ_CATEGORY}
                             categoryName="Faqs"
                         />

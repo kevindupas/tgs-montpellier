@@ -36,8 +36,8 @@ export default function Newsletter() {
         <div className="bg-orange-700">
             <div className="max-w-[1400px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center">
                 <div className="lg:w-0 lg:flex-1">
-                    <h2 className="text-4xl text-white font-bold font-microgramma tracking-[0.566667px] leading-[.95] uppercase">Newsletters</h2>
-                    <p className="mt-3 max-w-3xl text-lg leading-6 text-gray-300">Pour rester toujours au courant !</p>
+                    <h2 className="text-4xl text-white font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">Newsletters</h2>
+                    <p className="mt-3 max-w-3xl font-bold text-lg leading-6 text-gray-300">Pour rester toujours au courant !</p>
                 </div>
                 <div className="mt-8 lg:mt-0 lg:ml-8">
                     <form className="sm:flex px-5" onSubmit={handleSubmit}>
@@ -75,7 +75,7 @@ export default function Newsletter() {
                     </form>
                     <p className="mt-3 lg:ml-5 text-sm text-gray-300">
                         {errors ? (
-                            <p className="text-orange-900">Email ou code postale non valide, (exemple code postale : 31000)</p>
+                            <p className="text-red-900">Email ou code postale non valide, (exemple code postale : 31000)</p>
                         ) : success && (
                             <p className="text-green-500">Inscription prise en compte</p>
                         )}

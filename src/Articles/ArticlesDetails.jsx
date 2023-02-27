@@ -9,10 +9,8 @@ import React, { useEffect, useState } from 'react';
 import {
     Link, useNavigate, useParams,
 } from 'react-router-dom';
-// import { FaFacebookSquare, FaTwitter, FaTwitch, FaTiktok, FaSnapchatGhost, FaInstagram, FaYoutube, FaGlobe } from 'react-icons/fa';
 import YouTube from 'react-youtube';
 import styled from 'styled-components';
-import BeforeFooter from '../components/BeforeFooter';
 import Carousel from '../components/Carousel';
 import Loader from '../components/Loader';
 import { SALON_ID, URL } from '../utils/config';
@@ -108,7 +106,7 @@ export default function ArticlesDetails() {
     if (details) {
         return (
             <div>
-                <section className="overflow-hidden pb-6 bg-[url('/dist/images/pattern-light.jpg')]">
+                <section className="overflow-hidden pb-6 bg-[url('/dist/images/texture.jpeg')]">
                     <div className="max-w-[1200px] w-[calc(100%-30px)] mx-auto">
                         <div className="relative mt-[76px]">
                             <div className="ml-[-20px] lg:ml-auto w-[calc(100%+40px)] lg:w-[75%] mr-[-118px] overflow-hidden">
@@ -281,7 +279,7 @@ export default function ArticlesDetails() {
                     </div>
 
                 </section>
-                <section className="pb-2 bg-[url('/dist/images/pattern-light.jpg')]">
+                <section className="pb-2 bg-[url('/dist/images/texture.jpeg')]">
                     <div className="flex w-full lg:max-w-[1200px] lg:w-[calc(100%-30px)] mx-auto">
                         {details.plannings.map((planning) => (
                             planning.salon_id === SALON_ID
@@ -292,7 +290,7 @@ export default function ArticlesDetails() {
                                             <div />
                                             <ul className="w-max space-y-4 py-6 m-auto text-gray-600">
                                                 <li className="space-x-2">
-                                                    <span className="text-black font-semibold">{ planning.name}</span>
+                                                    {/* <span className="text-black font-semibold">{ planning.name}</span> */}
                                                     <div dangerouslySetInnerHTML={{ __html: planning.information }} />
                                                 </li>
                                             </ul>
@@ -324,16 +322,13 @@ export default function ArticlesDetails() {
                             {details.images.map((data) => {
                                 if (data.image !== null) {
                                     return (
-
                                         <div className="flex justify-center items-center mb-6 mx-6">
-
                                             <img
                                                 className="shadow-xl"
                                                 src={URL + data.image}
                                                 alt=""
                                             />
                                         </div>
-
                                     );
                                 }
 
@@ -368,7 +363,7 @@ export default function ArticlesDetails() {
                         </div>
                     </div>
                 </section>
-                <BeforeFooter />
+                {/* <BeforeFooter /> */}
             </div>
         );
     }

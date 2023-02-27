@@ -24,6 +24,7 @@ module.exports = {
                 tungsten:           ['Tungsten-Book', 'sans-serif'],
                 tungstenb_semibold: ['Tungsten-Semibold', 'sans-serif'],
                 microgramma:        ['MicrogrammaD', 'sans-serif'],
+                heading_bold:       ['HeadingNow-Bold', 'sans-serif'],
             },
             backgroundImage: {
                 'bg-pattern':     'url(\'./dist/images/pattern-dark.jpeg\')',

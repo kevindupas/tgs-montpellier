@@ -33,33 +33,33 @@ function Header({
                         {
                             navbarOpen
                                 ? (
-                                    <a href="/" className="text-xl text-white hover:text-orange-50">  </a>
+                                    <a href="/" className="text-2xl text-white hover:text-red-50">  </a>
 
                                 ) : (
                                     <>
                                         <Link
                                             to="exposants"
-                                            className="text-xl tracking-wide lg:block hidden text-white hover:text-orange-700"
+                                            className="text-2xl tracking-wide lg:block hidden text-white hover:text-red-700"
                                         >
                                             {' '}
                                             Exposants
                                         </Link>
                                         <Link
                                             to="programmes"
-                                            className="text-xl tracking-wide lg:block hidden text-white hover:text-orange-700"
+                                            className="text-2xl tracking-wide lg:block hidden text-white hover:text-red-700"
                                         >
                                             {' '}
                                             Programmes
                                         </Link>
                                         <Link
                                             to="invites"
-                                            className="text-xl tracking-wide lg:block hidden text-white hover:text-orange-700"
+                                            className="text-2xl tracking-wide lg:block hidden text-white hover:text-red-700"
                                         >
                                             Invités
                                         </Link>
                                         <Link
                                             to="billetterie"
-                                            className="text-xl tracking-wide lg:block hidden bg-orange-500 px-3 text-white hover:text-black"
+                                            className="text-2xl tracking-wide lg:block hidden bg-orange-500 px-3 text-white hover:text-black"
                                         >
                                             {' '}
                                             Billetterie
@@ -70,7 +70,7 @@ function Header({
                         <button
                             type="button"
                             onClick={() => setNavbarOpen(!navbarOpen)}
-                            className="text-base font-medium px-6 lg:px-0 text-white hover:text-orange-50"
+                            className="text-2xl font-medium px-6 lg:px-0 text-white hover:text-red-50"
                         >
 
                             <div className="">
@@ -101,7 +101,7 @@ function Header({
                                         )
                                         : (
                                             <svg
-                                                className="w-8 h-8 text-white"
+                                                className="w-10 h-10 text-white"
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"

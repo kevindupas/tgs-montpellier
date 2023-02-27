@@ -6,12 +6,12 @@ export default function Words() {
             <div className="max-w-[1200px] w-[calc(100%-30px)] mx-auto">
                 <ul className="flex justify-center flex-wrap ml-[-75px]">
                     <li className="mt-[17px] lg:mt-[23px] ml-[75px]">
-                        <a href="/" className="text-[40px] lg:text-[55px] font-tungstenb_semibold font-semibold tracking-[0.566667px] leading-[.95] uppercase artiste">
+                        <a href="/" className="text-[40px] lg:text-[40px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase artiste">
                             Mangas
                         </a>
                     </li>
                     <li className="mt-[17px] lg:mt-[23px] ml-[75px]">
-                        <a href="/" className="text-[40px] lg:text-[55px] text-white font-microgramma tracking-[0.566667px] leading-[.95] uppercase">
+                        <a href="/" className="text-[40px] lg:text-[40px] text-white font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">
                             Culture japonaise
                         </a>
                     </li>
@@ -19,22 +19,26 @@ export default function Words() {
                 {' '}
                 <ul className="flex justify-center flex-wrap ml-[-75px]">
                     <li className="mt-[17px] lg:mt-[23px] ml-[75px]">
-                        <a href="/" className="text-[40px] lg:text-[55px] text-white font-microgramma tracking-[0.566667px] leading-[.95] uppercase">
+                        <a href="/" className="text-[40px] lg:text-[40px] text-white font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">
                             web culture
                         </a>
                     </li>
                     <li className="mt-[17px] lg:mt-[23px] ml-[75px]">
-                        <a href="/" className="text-[40px] lg:text-[55px] font-tungstenb_semibold font-semibold tracking-[0.566667px] leading-[.95] uppercase artiste">
+                        <a href="/" className="text-[40px] lg:text-[40px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase artiste">
                             bd/comics
                         </a>
                     </li>
                     <li className="mt-[17px] lg:mt-[23px] ml-[75px]">
-                        <a href="/" className="text-[40px] lg:text-[55px] text-white font-microgramma tracking-[0.566667px] leading-[.95] uppercase">
+                        <a
+                            href="/"
+                            className="text-[40px] lg:text-[40px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase artiste
+
+                       ">
                             jeux vidéo
                         </a>
                     </li>
                     <li className="mt-[17px] lg:mt-[23px] ml-[75px]">
-                        <a href="/" className="text-[40px] lg:text-[55px] font-tungstenb_semibold font-semibold tracking-[0.566667px] leading-[.95] uppercase artiste">
+                        <a href="/" className=" text-[40px] lg:text-[40px] text-white font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">
                             cinema
                         </a>
                     </li>
