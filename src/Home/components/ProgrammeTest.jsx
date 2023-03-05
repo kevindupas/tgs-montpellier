@@ -25,7 +25,7 @@ export default function ProgrammeTest({
     useEffect(() => {
         async function fetchData() {
             const options = { method: 'GET' };
-            fetch(`${URL}/api/posts/categories/${category}/salon/${salon}?limit=${limit}`, options)
+            fetch(`${URL}/api/posts/categories/${category}/salon/${salon}`, options)
                 .then((response) => response.json())
                 .then((json) => setInvites(json.data))
                 .catch((err) => console.error(err));

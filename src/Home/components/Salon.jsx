@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { useSettings } from '../../context/SettingContext';
+import { useSettings } from '../../context/SettingContext';
+import { URL } from '../../utils/config';
 
 export default function Salon() {
-    // const { settings } = useSettings();
+    const { settings } = useSettings();
     return (
 
         <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -21,7 +22,7 @@ export default function Salon() {
                             <div className="shadow-lg md:rounded-3xl">
                                 <img
                                     className="h-[450px] overflow-hidden lg:max-w-max"
-                                    src="/dist/images/test.png"
+                                    src={URL + settings.footer_image}
                                     alt="MEETT - Parc des Expositions et Centre de Conventions de Toulouse Métropole"
                                 />
                             </div>
@@ -41,15 +42,15 @@ export default function Salon() {
                             <table className="min-w-full">
                                 <tbody>
                                     <tr>
-                                        <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste-black text-[40px] lg:text-[68px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">32 000</td>
+                                        <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste-black text-[40px] lg:text-[68px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">{settings.halls}</td>
                                         <td className="whitespace-nowrap px-3 pt-[25px] text-sm text-black flex-shrink-0 font-heading_bold font-semibold text-[30px] tracking-[0.566667px] leading-[.95] uppercase">M2</td>
                                     </tr>
                                     <tr>
-                                        <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste-black text-[40px] lg:text-[68px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">500</td>
+                                        <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste-black text-[40px] lg:text-[68px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">{settings.exposants}</td>
                                         <td className="whitespace-nowrap px-3 pt-[25px] text-sm text-black flex-shrink-0 font-heading_bold font-semibold text-[30px] tracking-[0.566667px] leading-[.95] uppercase">stands</td>
                                     </tr>
                                     <tr>
-                                        <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste-black text-[40px] lg:text-[68px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">70</td>
+                                        <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste-black text-[40px] lg:text-[68px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">{settings.scenes}</td>
                                         <td className="whitespace-nowrap px-3 pt-[25px] text-sm text-black flex-shrink-0 font-heading_bold font-semibold text-[30px] tracking-[0.566667px] leading-[.95] uppercase">scènes</td>
                                     </tr>
                                 </tbody>

@@ -18,9 +18,7 @@ export default function InvitesHome({
     tag,
     limit,
 }) {
-    const { settings } = useSettings();
     const [invites, setInvites] = useState([]);
-    // const [storage, setStorage] = useLocalStorage('invitesHome', null);
 
     useEffect(() => {
         async function fetchData() {
@@ -45,31 +43,6 @@ export default function InvitesHome({
                     <h1 className="mb-2 text-center font-heading_bold text-[40px] lg:text-[48px] tracking-[0.566667px] leading-[.95] uppercase text-white">Invités</h1>
                     <hr className="relative lg:left-0 w-[calc(100% + 130px)]" />
                 </div>
-                {/* <div className="mx-auto">
-
-                        <div className="mr-0 relative z-10 text-white">
-
-                            <h1 className="mb-2 text-center font-microgramma text-[40px] lg:text-[54px] tracking-[0.566667px] leading-[.95] uppercase">Invités</h1>
-                            <hr className="relative lg:left-0 w-[calc(100% + 130px)] my-4" />
-                            <table className="min-w-full justify-center items-center">
-                                <tbody>
-                                    <tr>
-                                        <td className="whitespace-nowrap py-4 pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste text-[40px] lg:text-[68px] font-microgramma tracking-[0.566667px] leading-[.95] uppercase">{ settings.halls }</td>
-                                        <td className="whitespace-nowrap px-3 py-4 pt-[25px] text-sm text-white flex-shrink-0 font-tungstenb_semibold font-semibold text-[45px] tracking-[0.566667px] leading-[.95] uppercase">halls</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-
-                        <div className="py-[30px] lg:py-[43px] flex justify-center items-center">
-                            <Link to="invites" className="inline-block text-center cursor-pointer bg-white py-5 px-11">
-                                <span className="text-black uppercase font-semibold">Liste complète</span>
-                                {' '}
-                            </Link>
-                        </div>
-
-                    </div> */}
                 <div
                     className="w-full lg:w-full h-full flex mx-auto justify-center items-center relative"
                 >
@@ -84,7 +57,7 @@ export default function InvitesHome({
                                         <div className="news-card">
                                             <img src={URL + data.image} alt={data.name} className="news-card__image" />
                                             <div className="news-card__text-wrapper w-full">
-                                                <h2 className="news-card__title">{data.name}</h2>
+                                                <h2 className="news-card__title font-bold">{data.name}</h2>
                                                 <div className="news-card__post-date">{data.tag.name}</div>
                                                 <div className="news-card__details-wrapper">
                                                     <p className="news-card__excerpt">

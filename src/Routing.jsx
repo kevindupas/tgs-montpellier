@@ -25,6 +25,7 @@ import MentionLegale from './Terms/MentionLegale';
 import ConditionGeneral from './Terms/ConditionGeneral';
 import Mosaic from './Mosaic/Mosaic';
 import FaqWithSearch from './Faq/FaqWithSearch';
+import Presse from './Presse/Presse';
 
 export default function Routing() {
     const [navbarOpen, setNavbarOpen] = useState(false);
@@ -121,6 +122,7 @@ export default function Routing() {
                 <Route path="post/:postId" element={<ArticlesDetails />} />
                 <Route path="info/:infoId" element={<InfosPratiquesDetails />} />
                 <Route path="faq/:faqId" element={<FaqDetails />} />
+                <Route path="presse" element={<Presse />} />
 
                 <Route path="mention_legale" element={<MentionLegale />} />
                 <Route path="cgu" element={<ConditionGeneral />} />

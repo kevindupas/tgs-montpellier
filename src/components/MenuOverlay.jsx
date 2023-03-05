@@ -178,14 +178,14 @@ export default function MenuOverlay({ navbarOpen, setNavbarOpen }) {
                                 </a>
                             </li>
                             <li className="relative footer-overlay">
-                                <a
-                                    href={settings.presse_kit}
+                                <Link
+                                    to="presse"
                                     target="_blank"
                                     className="font-tungstenb_semibold font-semibold text-[40px] lg:text-[65px] leading-none uppercase artiste"
                                     rel="noreferrer"
                                 >
                                     presse
-                                </a>
+                                </Link>
                             </li>
                             {/* <li className="relative footer-overlay">
                                 <a

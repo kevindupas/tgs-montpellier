@@ -12,11 +12,11 @@ function Footer() {
             <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
                 <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
                     <div className="px-5 py-2">
-                        <a href={settings.presse_kit} className="text-base text-white font-semibold"> Presse </a>
+                        <Link to="presse" className="text-base text-white font-semibold"> Presse </Link>
                     </div>
 
                     <div className="px-5 py-2">
-                        <a href="mailto:contact@tgsevenements.com" className="text-base text-white font-semibold"> Devenir staff </a>
+                        <a href="mailto:staff@tgsevenements.com" className="text-base text-white font-semibold"> Devenir staff </a>
                     </div>
 
                     <div className="px-5 py-2">

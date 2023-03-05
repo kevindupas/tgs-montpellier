@@ -1,7 +1,8 @@
 /* eslint-disable no-shadow */
+import clsx from 'clsx';
 import React, { useEffect, useState } from 'react';
 import Loader from '../../components/Loader';
-import { SALON_ID, URL } from '../../utils/config';
+import { URL } from '../../utils/config';
 
 export default function AllSalon() {
     const [error, setError] = useState(null);
@@ -19,7 +20,7 @@ export default function AllSalon() {
             },
         };
 
-        fetch(`${URL}/api/salons`, options)
+        fetch(`${URL}/api/events`, options)
             .then((res) => res.json())
             .then(
                 (data) => {
@@ -56,14 +57,16 @@ export default function AllSalon() {
                         </div>
                         <div className="mx-auto grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-3">
                             {allSalon.map((value) => {
-                                if (value.id !== SALON_ID) {
+                                if (value.name !== 'TGS Montpellier') {
                                     return (
                                         <a href="/" key={value.id}>
                                             <div className="space-y-4">
-                                                <img className="mx-auto w-44 h-auto lg:w-44 lg:h-full" src={URL + value.logo} alt="" />
+                                                <a href={value.link}>
+                                                    <img className={clsx('mx-auto h-auto lg:h-full', value.name !== 'TGS Springbreak' ? 'w-44' : 'w-52')} src={URL + value.logo} alt="" />
+                                                </a>
                                                 <div className="space-y-2">
                                                     <div className="text-xs font-medium lg:text-sm">
-                                                        <h3 className="font-bold">{value.event_date}</h3>
+                                                        <h3 className="font-bold">{value.date}</h3>
                                                     </div>
                                                 </div>
                                             </div>

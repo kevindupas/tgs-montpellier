@@ -449,12 +449,12 @@
 	border-radius: 0;
 	color: #fff;
 	box-shadow: none;
-	background-color: #b91b1c !important;
+	background-color: #ec6f15 !important;
 }
 
 /* round buttons on hover */
 .rec.rec-arrow:hover {
-	background-color: #74191a !important;
+	background-color: #9a2a02 !important;
 }
 
 /* hide disabled buttons */

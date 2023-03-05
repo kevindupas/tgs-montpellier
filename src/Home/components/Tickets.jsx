@@ -62,14 +62,15 @@ export default function Tickets() {
                             maintenant !
                         </h1>
                     </div>
+
                     <div
-                        className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-5"
+                        className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-4 place-items-center"
                     >
                         {
                             prices && (
                                 <>
                                     {prices.map((price) => (
-                                        <div key={price.id} className={clsx('border-2 bg-gray-100 rounded-lg shadow-sm scale-100 hover:scale-110 ease-in duration-200', price.name === 'VIP' ? 'border-red-500' : '')}>
+                                        <div key={price.id} className={clsx('border-2 bg-gray-100 h-full w-full rounded-lg shadow-sm scale-100 hover:scale-110 ease-in duration-200', price.name === 'VIP' ? 'border-red-500' : '')}>
                                             { price.name === 'VIP' && (<span className="absolute flex -top-3 rounded-full px-3 left-0 w-36 right-0 mx-auto justify-center items-center text-white bg-orange-500">Quantité limitée</span>) }
                                             <div className="p-6">
                                                 <h2 className="text-lg leading-6 font-medium text-black uppercase text-center">{price.name}</h2>
@@ -145,6 +146,7 @@ export default function Tickets() {
                         }
 
                     </div>
+
                 </div>
             </div>
 

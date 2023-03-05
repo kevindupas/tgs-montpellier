@@ -13,7 +13,8 @@ import Infos from './components/Infos';
 import InformationTest from './components/InformationTest';
 import PartnerTest from './components/PartnerTest';
 import ProgrammeTest from './components/ProgrammeTest';
-import { SALON_ID } from '../utils/config';
+import { INVITE_CATEGORY, SALON_ID } from '../utils/config';
+import InviteTest from './components/InviteTest';
 
 export default function Home() {
     // const { settings } = useSettings();
@@ -28,8 +29,8 @@ export default function Home() {
                 />
                 <Countdown />
                 <InformationTest />
-                <InvitesHome
-                    category={1}
+                <InviteTest
+                    category={INVITE_CATEGORY}
                     salon={SALON_ID}
                     limit={5}
                 />

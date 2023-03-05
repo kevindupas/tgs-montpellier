@@ -18,25 +18,25 @@ export default function InformationTest() {
                         <div className="mx-auto h-56 w-56 rounded-full bg-orange-600 flex justify-center items-center hover:scale-105">
                             <img src="/dist/icons/faq.svg" width="50%" className="mx-auto" alt="" />
                         </div>
-                        <h3 className="mt-6 text-base font-heading_bold font-semibold leading-7 tracking-tight text-white">FAQ</h3>
+                        <h3 className="mt-6 text-base font-heading_bold font-semibold leading-7 tracking-tight text-white uppercase">FAQ</h3>
                     </Link>
                     <a href={URL + settings.plan_pdf} target="_blank" rel="noreferrer">
                         <div className="mx-auto h-56 w-56 rounded-full bg-orange-600 flex justify-center items-center hover:scale-105">
                             <img src="/dist/icons/plan.svg" width="50%" className="mx-auto" alt="" />
                         </div>
-                        <h3 className="mt-6 text-base font-heading_bold font-semibold leading-7 tracking-tight text-white">Plan salon</h3>
+                        <h3 className="mt-6 text-base font-heading_bold font-semibold leading-7 tracking-tight text-white uppercase">Plan salon</h3>
                     </a>
                     <a href={URL + settings.planning_pdf} target="_blank" rel="noreferrer">
                         <div className="mx-auto h-56 w-56 rounded-full bg-orange-600 flex justify-center items-center hover:scale-105">
                             <img src="/dist/icons/planning.svg" width="50%" className="mx-auto" alt="" />
                         </div>
-                        <h3 className="mt-6 text-base font-heading_bold font-semibold leading-7 tracking-tight text-white">Planning</h3>
+                        <h3 className="mt-6 text-base font-heading_bold font-semibold leading-7 tracking-tight text-white uppercase">Planning</h3>
                     </a>
                     <Link to="informations-pratiques">
                         <div className="mx-auto h-56 w-56 rounded-full bg-orange-600 flex justify-center items-center hover:scale-105">
                             <img src="/dist/icons/info_pratiques.svg" width="50%" className="mx-auto" alt="" />
                         </div>
-                        <h3 className="mt-6 text-base font-heading_bold font-semibold leading-7 tracking-tight text-white">Infos Pratiques</h3>
+                        <h3 className="mt-6 text-base font-heading_bold font-semibold leading-7 tracking-tight text-white uppercase">Infos Pratiques</h3>
                     </Link>
                 </ul>
             </div>
