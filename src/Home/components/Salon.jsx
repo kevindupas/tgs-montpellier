@@ -62,7 +62,7 @@ export default function Salon() {
                         <Link to="programmes" className="inline-block text-center cursor-pointer py-5 px-11">
                             <img
                                 className="h-56 overflow-hidden lg:max-w-max"
-                                src="/dist/icons/decouvrir.svg"
+                                src="/dist/icons/decouvrir.png"
                                 alt="MEETT - Parc des Expositions et Centre de Conventions de Toulouse Métropole"
                             />
 

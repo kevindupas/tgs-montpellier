@@ -71,8 +71,8 @@ export default function InfosPratiquesDetails() {
                         >
                             <img
                                 className="w-full h-full object-cover"
-                                src="http://localhost:8001/_nuxt/image/042a85.webp"
-                                alt=""
+                                src={URL + details.image}
+                                alt={details.name}
                             />
                         </div>
                     </div>
