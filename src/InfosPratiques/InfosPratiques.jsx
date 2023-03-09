@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 // import BeforeFooter from '../components/BeforeFooter';
 import clsx from 'clsx';
+import _ from 'lodash';
 import { INFOS_PRATIQUES_CATEGORY, SALON_ID, URL } from '../utils/config';
 import Loader from '../components/Loader';
 import CategoryImage from '../components/CategoryImage';
@@ -40,7 +41,7 @@ export default function InfosPratiques() {
             );
     }, []);
 
-    console.log(infos);
+    const sortedData = _.sortBy(infos, 'sorting');
 
     if (error) {
         return (
@@ -61,7 +62,7 @@ export default function InfosPratiques() {
                 <section className="pt-[63px] pb-[128px] bg-black">
                     <div className="max-w-[1200px] w-[calc(100%-30px)] mx-auto">
                         <div className="flex flex-wrap mt-[-20px] ml-[-20px]">
-                            {infos.map((value) => (
+                            {sortedData.map((value) => (
                                 <article key={value.id} className="pt-[20px] pl-[20px] w-full lg:w-1/3 lg:basis-auto text-black">
                                     <div className="py-[15px] px-[30px] w-auto h-80 mx-auto my-0 bg-zinc-200">
                                         <div className="flex items-center flex-col">

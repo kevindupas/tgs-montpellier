@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import _ from 'lodash';
 import { FAQ_CATEGORY, SALON_ID, URL } from '../utils/config';
 import Loader from '../components/Loader';
 import CategoryImage from '../components/CategoryImage';
@@ -37,6 +38,8 @@ export default function Faq() {
             );
     }, []);
 
+    const sortedData = _.sortBy(faq, 'sorting');
+
     if (error) {
         return (
             <div>
@@ -56,7 +59,7 @@ export default function Faq() {
                 <section className="pt-[63px] pb-[128px] bg-black">
                     <div className="max-w-[1200px] w-[calc(100%-30px)] mx-auto">
                         <div className="flex flex-wrap mt-[-20px] ml-[-20px]">
-                            {faq.map((value) => (
+                            {sortedData.map((value) => (
                                 <article key={value.id} className="pt-[20px] pl-[20px] w-full lg:w-1/3 lg:basis-auto text-black">
                                     <div className="bg-yellow-50 py-[15px] px-[30px] w-auto h-80 mx-auto my-0">
                                         <div className="flex items-center flex-col">

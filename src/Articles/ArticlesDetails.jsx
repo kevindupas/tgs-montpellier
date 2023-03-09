@@ -105,8 +105,8 @@ export default function ArticlesDetails() {
 
     if (details) {
         return (
-            <div>
-                <section className="overflow-hidden pb-6 bg-[url('/dist/images/texture.jpeg')]">
+            <div className="bg-gray-400">
+                <section className="overflow-hidden pb-6">
                     <div className="max-w-[1200px] w-[calc(100%-30px)] mx-auto">
                         <div className="relative mt-[76px]">
                             <div className="ml-[-20px] lg:ml-auto w-[calc(100%+40px)] lg:w-[75%] mr-[-118px] overflow-hidden">
@@ -279,12 +279,13 @@ export default function ArticlesDetails() {
                     </div>
 
                 </section>
-                <section className="pb-2 bg-[url('/dist/images/texture.jpeg')]">
+                <section className="pb-2 bg-gray-300">
                     <div className="flex w-full lg:max-w-[1200px] lg:w-[calc(100%-30px)] mx-auto">
+
                         {details.plannings.map((planning) => (
                             planning.salon_id === SALON_ID
                                 ? (
-                                    <div className="w-96 h-full bg-white">
+                                    <div className="w-96 h-full bg-white mt-9">
                                         <div className="relative p-6 space-y-6 lg:p-8">
                                             <h3 className="text-3xl text-gray-700 font-semibold text-center">Infos planning</h3>
                                             <div />
@@ -306,9 +307,10 @@ export default function ArticlesDetails() {
                                 : null
 
                         ))}
-                        <div className="flex w-full px-5 lg:px-20 pb-[40px]">
+                        <div className="flex w-full px-5 lg:px-20 pb-[40px] mt-9">
                             <div dangerouslySetInnerHTML={{ __html: details.content }} />
                         </div>
+
                     </div>
                     {/* <div className="relative h-0 pb-[53%] mx-10 mb-14 lg:w-[75%]">
                         <div className="discoverImageWrapper">

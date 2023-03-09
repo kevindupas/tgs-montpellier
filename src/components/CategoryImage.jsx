@@ -32,8 +32,6 @@ export default function CategoryImage({ categoryId, categoryName }) {
             );
     }, [categoryId, categoryName]);
 
-    console.log(categoryId);
-
     if (error) {
         return (
             <div>

@@ -5,6 +5,7 @@ import { Disclosure } from '@headlessui/react';
 // import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/outline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import _ from 'lodash';
 import Loader from '../components/Loader';
 import CategoryImage from '../components/CategoryImage';
 import { FAQ_CATEGORY, SALON_ID, URL } from '../utils/config';
@@ -40,7 +41,9 @@ export default function FaqWithSearch() {
             );
     }, []);
 
-    const filteredFaqs = faq.filter((value) => value.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    const sortedData = _.sortBy(faq, 'sorting');
+
+    const filteredFaqs = sortedData.filter((value) => value.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
     if (error) {
         return (
