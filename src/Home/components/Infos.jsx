@@ -45,7 +45,7 @@ export default function Infos() {
     return (
     // TODO: Rendre toute cette partie dynamique
         <section
-            className="pt-[46px] pb-[52px] lg:pt-[135px] lg:pb-[93px] overflow-hidden bg-[url('/dist/images/pattern-light.jpg')] bg-repeat"
+            className="pt-[46px] pb-[52px] lg:pt-[135px] lg:pb-[93px] bg-[url('/dist/images/fond1.jpg')] bg-cover bg-bottom"
         >
             <div
                 className="flex flex-wrap lg:flex-nowrap justify-center items-center mx-auto max-w-[1200px] w-[calc(100%-30px)] relative"
@@ -55,7 +55,7 @@ export default function Infos() {
                         MEETT
                     </p> */}
                     {' '}
-                    <h1 className="text-6xl font-heading_bold leading-[1.20] uppercase text-white -mt-24">
+                    <h1 className="text-6xl font-heading_bold leading-[1.20] uppercase text-orange-500 -mt-24">
                         {settings.title_discover}
                     </h1>
                     {/* <hr className="relative -left-10 w-[calc(100% + 130px)] mb-2 w-96 border-black" /> */}
