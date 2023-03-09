@@ -65,9 +65,7 @@ export default function AllSalon() {
                                                     <img className={clsx('mx-auto h-auto lg:h-full', value.name !== 'TGS Springbreak' ? 'w-44' : 'w-52')} src={URL + value.logo} alt="" />
                                                 </a>
                                                 <div className="space-y-2">
-                                                    <div className="text-xs font-medium lg:text-sm">
-                                                        <h3 className="font-bold">{value.date}</h3>
-                                                    </div>
+                                                    <h3 className="text-lg font-extrabold">{value.date}</h3>
                                                 </div>
                                             </div>
                                         </a>
