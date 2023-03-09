@@ -41,7 +41,7 @@ export default function Billetterie() {
                         <h1 className="font-microgramma text-white text-[40px] lg:text-[96px] tracking-[0.566667px] leading-[.95] uppercase">Billeterie</h1>
                     </div>
                 </section> */}
-                <div className="overflow-hidden bg-[url('/dist/images/pattern-dark.jpeg')] bg-repeat">
+                <div className="overflow-hidden bg-[#F3F3F3] bg-repeat">
                     <section className="pb-36">
                         <Tickets />
                         <div className="max-w-[1200px] m-auto">

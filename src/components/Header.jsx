@@ -33,7 +33,7 @@ function Header({
                         {
                             navbarOpen
                                 ? (
-                                    <a href="/" className="text-2xl text-white hover:text-red-50">  </a>
+                                    <a href="/" className="text-2xl text-white hover:text-orange-500">  </a>
 
                                 ) : (
                                     <>
