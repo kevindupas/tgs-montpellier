@@ -6,7 +6,7 @@ import InvitesHome from './components/InvitesHome';
 import Countdown from './components/Countdown';
 import Salon from './components/Salon';
 import Words from './components/Words';
-import Tickets from './components/Tickets';
+import TicketsHome from './components/TicketsHome';
 import Newsletter from './components/Newsletter';
 import AllSalon from './components/AllSalon';
 import Infos from './components/Infos';
@@ -41,7 +41,7 @@ export default function Home() {
                     limit={5}
                 />
                 <Words />
-                <Tickets />
+                <TicketsHome />
                 <Infos />
                 <PartnerTest />
                 <AllSalon />
