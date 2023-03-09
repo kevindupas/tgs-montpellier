@@ -45,6 +45,7 @@ export default function Billetterie() {
                     <section className="pb-36">
                         <Tickets />
                         <div className="max-w-[1200px] m-auto">
+                            <h1 className="mb-2 text-center font-heading_bold text-[40px] lg:text-[38px] tracking-[0.566667px] leading-[.95] uppercase text-black">{settings.event_date}</h1>
                             <ul className="grid">
                                 <div
                                     className="text-white mt-20 w-full h-full"

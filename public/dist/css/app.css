@@ -4868,6 +4868,10 @@ select{
     font-size: 3.75rem;
     line-height: 1;
   }
+
+  .lg\:text-\[38px\]{
+    font-size: 38px;
+  }
 }
 
 @media (min-width: 1280px){
