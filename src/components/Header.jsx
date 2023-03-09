@@ -39,21 +39,21 @@ function Header({
                                     <>
                                         <Link
                                             to="exposants"
-                                            className="text-2xl tracking-wide lg:block hidden text-white hover:text-red-700"
+                                            className="text-2xl tracking-wide lg:block hidden text-white hover:text-orange-500"
                                         >
                                             {' '}
                                             Exposants
                                         </Link>
                                         <Link
                                             to="programmes"
-                                            className="text-2xl tracking-wide lg:block hidden text-white hover:text-red-700"
+                                            className="text-2xl tracking-wide lg:block hidden text-white hover:text-orange-500"
                                         >
                                             {' '}
                                             Programmes
                                         </Link>
                                         <Link
                                             to="invites"
-                                            className="text-2xl tracking-wide lg:block hidden text-white hover:text-red-700"
+                                            className="text-2xl tracking-wide lg:block hidden text-white hover:text-orange-500"
                                         >
                                             Invités
                                         </Link>
@@ -70,7 +70,7 @@ function Header({
                         <button
                             type="button"
                             onClick={() => setNavbarOpen(!navbarOpen)}
-                            className="text-2xl font-medium px-6 lg:px-0 text-white hover:text-red-50"
+                            className="text-2xl font-medium px-6 lg:px-0 text-white hover:text-orange-50"
                         >
 
                             <div className="">

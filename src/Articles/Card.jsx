@@ -177,9 +177,9 @@ export default function Card({ menuPosts }) {
                                                         </li> */}
                                             </div>
                                         </p>
-                                        <Link className="news-card__read-more text-red-600" to={`/post/${value.id}`}>
+                                        <Link className="news-card__read-more bg-black hover:bg-orange-500 text-orange-500 hover:text-black" to={`/post/${value.id}`}>
                                             En savoir plus
-                                            <i className="fas fa-long-arrow-alt-right text-red-600" />
+                                            <i className="fas fa-long-arrow-alt-right text-orange-600" />
                                         </Link>
                                     </div>
                                 </div>

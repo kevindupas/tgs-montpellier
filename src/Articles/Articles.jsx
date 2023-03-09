@@ -67,10 +67,10 @@ export default function Articles({ categoryName, categories }) {
         return (
             <>
                 <CategoryImage categoryId={categories} categoryName={categoryName} />
-                <div className="bg-black">
+                <div className="bg-[#f3f3f3]">
                     <section className="pt-[61px] pb-[53px]">
                         <div className="max-w-[1200px] w-[calc(100%-30px)] mx-auto justify-start items-center flex-wrap flex">
-                            <p className="mr-9 w-auto flex-none font-tungsten font-semibold text-[56px] tracking-[0.566667px] leading-[.95] uppercase text-white">Filtres :</p>
+                            <p className="mr-9 w-auto flex-none font-tungsten font-semibold text-[56px] tracking-[0.566667px] leading-[.95] uppercase text-black">Filtres :</p>
                             <div className="space-x-3 flex justify-center items-center font-tungstenb_semibold font-medium uppercase">
                                 {tagList.map((tag) => (
                                     <button

@@ -559,8 +559,6 @@
 }
 
 .news-card__read-more {
-	background: black;
-	color: #bbb;
 	display: block;
 	padding: 0.4rem 0.6rem;
 	border-radius: 0.3rem;
@@ -587,5 +585,5 @@
 
 .news-card__read-more:hover i {
 	left: 0.5rem;
-	color: yellow;
+	width: 10%;
 }

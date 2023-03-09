@@ -287,7 +287,7 @@ export default function ArticlesDetails() {
                                 ? (
                                     <div className="w-96 h-full bg-white mt-9 border border-gray-400 shadow-lg rounded-lg">
                                         <div className="relative p-6 space-y-6 lg:p-8">
-                                            <h3 className="text-3xl text-gray-700 font-semibold text-center">Infos planning</h3>
+                                            <h3 className="text-3xl text-center text-orange-500 uppercase font-bold underline">Infos planning</h3>
                                             <div />
                                             <ul className="w-max space-y-4 py-6 m-auto text-gray-600">
                                                 <li className="space-x-2">
