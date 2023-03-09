@@ -355,7 +355,7 @@ export default function ArticlesDetails() {
                             <div className="my-8">
                                 <button
                                     type="button"
-                                    className="inline-flex items-center px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-black bg-white"
+                                    className="inline-flex items-center px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-orange-500"
                                     onClick={() => navigate(-1)}
                                 >
                                     <img className="-ml-1 mr-3 h-5 w-5" src="../dist/images/arrow-left-long-solid.svg" alt="" />
