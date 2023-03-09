@@ -105,7 +105,7 @@ export default function ArticlesDetails() {
 
     if (details) {
         return (
-            <div className="bg-gray-400">
+            <div className="bg-[#f3f3f3]">
                 <section className="overflow-hidden pb-6">
                     <div className="max-w-[1200px] w-[calc(100%-30px)] mx-auto">
                         <div className="relative mt-[76px]">
@@ -115,7 +115,7 @@ export default function ArticlesDetails() {
                                 </div>
                             </div>
                             <div className="absolute bottom-0 left-12 m-auto flex items-end">
-                                <h1 className="text-black text-[28px] mb-[-46px] lg:mb-[21px] lg:text-[56px] font-microgramma uppercase bg-white px-4 py-1">
+                                <h1 className="text-black text-[28px] mb-[-46px] lg:mb-[21px] lg:text-[50px] font-microgramma uppercase bg-white px-4 py-1">
                                     {details.name}
                                 </h1>
                             </div>
@@ -279,13 +279,13 @@ export default function ArticlesDetails() {
                     </div>
 
                 </section>
-                <section className="pb-2 bg-gray-300">
+                <section className="pb-2 bg-white">
                     <div className="flex w-full lg:max-w-[1200px] lg:w-[calc(100%-30px)] mx-auto">
 
                         {details.plannings.map((planning) => (
                             planning.salon_id === SALON_ID
                                 ? (
-                                    <div className="w-96 h-full bg-white mt-9">
+                                    <div className="w-96 h-full bg-white mt-9 border border-gray-400 shadow-lg rounded-lg">
                                         <div className="relative p-6 space-y-6 lg:p-8">
                                             <h3 className="text-3xl text-gray-700 font-semibold text-center">Infos planning</h3>
                                             <div />
