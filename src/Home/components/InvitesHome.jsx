@@ -184,9 +184,9 @@ export default function InvitesHome({
                                                         </li> */}
                                                         </ul>
                                                     </p>
-                                                    <Link className="news-card__read-more" to={`/post/${data.id}`}>
+                                                    <Link className="news-card__read-more bg-black hover:bg-orange-500 text-orange-500 hover:text-black" to={`/post/${data.id}`}>
                                                         En savoir plus
-                                                        <i className="fas fa-long-arrow-alt-right" />
+                                                        <i className="fas fa-long-arrow-alt-right text-orange-600" />
                                                     </Link>
                                                 </div>
                                             </div>

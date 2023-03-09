@@ -77,7 +77,7 @@ export default function Articles({ categoryName, categories }) {
                                         key={`Tag-${tag}`}
                                         type="button"
                                         onClick={() => setActiveTab(tag)}
-                                        className={clsx('inline-flex items-center px-3 py-2 border border-transparent leading-4 font-medium rounded-md shadow-sm', activeTab === tag ? 'bg-orange-500 text-white' : 'bg-white text-black')}
+                                        className={clsx('inline-flex items-center px-3 py-2 border hover:bg-orange-500 hover:text-white border-transparent leading-4 font-medium rounded-md shadow-sm', activeTab === tag ? 'bg-orange-500 text-white' : 'bg-white text-black')}
                                     >
                                         <span className="relative z-10 text-xl font-bold uppercase inline-block">
                                             {tag}
