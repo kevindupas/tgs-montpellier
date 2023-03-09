@@ -2815,6 +2815,10 @@ select{
   background-size: cover;
 }
 
+.bg-bottom{
+  background-position: bottom;
+}
+
 .bg-repeat{
   background-repeat: repeat;
 }
