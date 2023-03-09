@@ -195,9 +195,9 @@ export default function InviteTest({
                         })}
                         <Link className="mx-4" to="programmes">
                             <div className="news-card">
-                                <img src="/dist/images/more-pro.png" alt="dd" className="news-card__image" />
+                                <img src="/dist/images/more.png" alt="invités" className="news-card__image" />
                                 <div className="news-card__text-wrapper w-full">
-                                    <h2 className="news-card__title">Voir plus de programmes</h2>
+                                    <h2 className="news-card__title">Voir plus d'invités</h2>
                                     {/* <div className="news-card__post-date">effez</div> */}
                                 </div>
                             </div>
