@@ -2813,6 +2813,22 @@ select{
   background-image: url('/dist/images/pattern-light.jpg');
 }
 
+.bg-\[url\(\'\/dist\/images\/events\.png\'\)\]{
+  background-image: url('/dist/images/events.png');
+}
+
+.bg-cover{
+  background-size: cover;
+}
+
+.bg-contain{
+  background-size: contain;
+}
+
+.bg-auto{
+  background-size: auto;
+}
+
 .bg-repeat{
   background-repeat: repeat;
 }

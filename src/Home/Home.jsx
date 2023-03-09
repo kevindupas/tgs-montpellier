@@ -25,7 +25,7 @@ export default function Home() {
             <main className="block">
                 <Video
                     className="object-cover h-full w-full pt-[5em]"
-                    source="/dist/video/home-intro-convert.mp4"
+                    source="/dist/video/new_video_montpellier.webm"
                 />
                 <Countdown />
                 <InformationTest />
