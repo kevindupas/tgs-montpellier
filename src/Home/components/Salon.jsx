@@ -35,14 +35,14 @@ export default function Salon() {
                     <div className="max-w-7xl">
                         <div className="sm:mt-24 md:mx-auto lg:mx-0 lg:mt-0">
 
-                            <h1 className="mb-2 text-center font-heading_bold text-[40px] lg:text-[45px] tracking-[0.566667px] leading-[.95] uppercase">À DECOUVRIR</h1>
+                            <h1 className="mb-2 text-center font-heading_bold text-[40px] lg:text-[45px] tracking-[0.566667px] leading-[.95] uppercase">À DÉCOUVRIR</h1>
                             <hr className="relative lg:left-0 w-[calc(100% + 130px)] my-4" />
 
                             <table className="min-w-full">
                                 <tbody>
                                     <tr>
                                         <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste-black text-[40px] lg:text-[45px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase pt-4">{settings.halls}</td>
-                                        <td className="whitespace-nowrap px-3 pt-[25px] text-sm text-black flex-shrink-0 font-heading_bold font-semibold text-[30px] tracking-[0.566667px] leading-[.95] uppercase">M2</td>
+                                        <td className="whitespace-nowrap px-3 pt-[25px] text-sm text-black flex-shrink-0 font-heading_bold font-semibold text-[30px] tracking-[0.566667px] leading-[.95] uppercase">m²</td>
                                     </tr>
                                     <tr>
                                         <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste-black text-[40px] lg:text-[45px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase pt-4">{settings.exposants}</td>

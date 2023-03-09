@@ -78,8 +78,8 @@ export default function Infos() {
                     </div>
                     {' '}
                     <div className="discoverWrapButton">
-                        <a href="https://www.youtube.com/user/tgsevenements" target="_blank" className="wrapButton bg-white" rel="noreferrer">
-                            <span className="text-black font-bold uppercase">Découvrir</span>
+                        <a href="https://www.youtube.com/user/tgsevenements" target="_blank" className="wrapButton bg-white hover:bg-orange-500 text-orange-500 hover:text-white " rel="noreferrer">
+                            <span className="font-bold uppercase">Découvrir</span>
                             {' '}
                         </a>
                     </div>

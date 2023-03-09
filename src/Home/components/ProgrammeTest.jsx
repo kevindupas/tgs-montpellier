@@ -37,12 +37,12 @@ export default function ProgrammeTest({
 
     return (
     // TODO: Modifier les nombres dans l'admin salon
-        <section className="relative w-full py-16 bg-zinc-900">
+        <section className="relative w-full py-16 bg-white">
 
             <div className="max-w-[1200px] w-[calc(100%-30px)] mx-auto flex justify-start items-start flex-wrap">
 
                 <div className="mx-auto max-w-2xl mb-10">
-                    <h1 className="mb-2 text-center font-heading_bold text-[40px] lg:text-[48px] tracking-[0.566667px] leading-[.95] uppercase text-white">Programmes</h1>
+                    <h1 className="mb-2 text-center font-heading_bold text-[40px] lg:text-[48px] tracking-[0.566667px] leading-[.95] uppercase text-black">Programmes</h1>
                     <hr className="relative lg:left-0 w-[calc(100% + 130px)]" />
                 </div>
                 {/* <div className="mx-auto">
