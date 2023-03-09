@@ -2807,6 +2807,10 @@ select{
   background-image: url('/dist/images/pattern-light.jpg');
 }
 
+.bg-\[url\(\'\/dist\/images\/fond1\.jpg\'\)\]{
+  background-image: url('/dist/images/fond1.jpg');
+}
+
 .bg-cover{
   background-size: cover;
 }
@@ -3381,6 +3385,11 @@ select{
 .text-indigo-700{
   --tw-text-opacity: 1;
   color: rgb(67 56 202 / var(--tw-text-opacity));
+}
+
+.text-gray-700{
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .underline{
