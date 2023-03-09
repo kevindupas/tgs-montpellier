@@ -11,7 +11,7 @@ export default function Newsletter() {
     const [errors, setErrors] = useState('');
     const [success, setSuccess] = useState('');
     function handleSubmit(e) {
-        const newsletters = { email, code_postal };
+        const newsletters = { email, code_postal, salon: 'TGS Montpellier' };
         e.preventDefault();
         fetch(`${URL}/api/newsletters`, {
             method:  'POST',
