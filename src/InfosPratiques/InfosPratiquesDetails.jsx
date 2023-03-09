@@ -77,10 +77,10 @@ export default function InfosPratiquesDetails() {
                         </div>
                     </div>
                 </section>
-                <section className="pb-10 bg-black">
+                <section className="pb-10 bg-[#f3f3f3]">
                     <article className="relative">
                         <div className="relative z-10 pt-[100px] pb-[95px] max-w-[800px] w-[calc(100%-30px)] mx-auto">
-                            <div className="text-white" dangerouslySetInnerHTML={{ __html: details.content }} />
+                            <div className="text-black" dangerouslySetInnerHTML={{ __html: details.content }} />
                         </div>
 
                     </article>
