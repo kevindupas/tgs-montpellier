@@ -49,9 +49,9 @@ const Carousel = ({
         // renderArrow={myArrow}
         breakPoints={breakPoints}
         showArrows
-        enableSwipe
-        enableMouseSwipe
-        preventDefaultTouchmoveEvent
+        // enableSwipe
+        // enableMouseSwipe
+        // preventDefaultTouchmoveEvent
         wheel={wheel}
         wheelScroll={wheelScroll}
         pagination={false}

@@ -32,7 +32,7 @@ export default function InviteTest({
 
     return (
     // TODO: Modifier les nombres dans l'admin salon
-        <section className="relative w-full py-16 bg-white">
+        <section className="relative w-full py-16 bg-[#f3f3f3]">
 
             <div className="max-w-[1200px] w-[calc(100%-30px)] mx-auto flex justify-start items-start flex-wrap">
 
