@@ -42,15 +42,15 @@ export default function Salon() {
                                 <tbody>
                                     <tr>
                                         <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste-black text-[40px] lg:text-[45px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase pt-4">{settings.halls}</td>
-                                        <td className="whitespace-nowrap px-3 pt-[25px] text-black flex-shrink-0 font-heading_bold font-semibold text-4xl tracking-[0.566667px] leading-[.95] uppercase">m²</td>
+                                        <td className="whitespace-nowrap px-3 pt-5 text-black flex-shrink-0 font-heading_bold font-semibold text-4xl tracking-[0.566667px] leading-[.95] uppercase">m²</td>
                                     </tr>
                                     <tr>
                                         <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste-black text-[40px] lg:text-[45px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase pt-4">{settings.exposants}</td>
-                                        <td className="whitespace-nowrap px-3 pt-[25px] text-black flex-shrink-0 font-heading_bold font-semibold text-4xl tracking-[0.566667px] leading-[.95] uppercase">stands</td>
+                                        <td className="whitespace-nowrap px-3 pt-6 text-black flex-shrink-0 font-heading_bold font-semibold text-4xl tracking-[0.566667px] leading-[.95] uppercase">stands</td>
                                     </tr>
                                     <tr>
                                         <td className="whitespace-nowrap pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste-black text-[40px] lg:text-[45px] font-heading_bold tracking-[0.566667px] leading-[.95] uppercase pt-4">{settings.scenes}</td>
-                                        <td className="whitespace-nowrap px-3 pt-[25px] text-black flex-shrink-0 font-heading_bold font-semibold text-4xl tracking-[0.566667px] leading-[.95] uppercase">scènes</td>
+                                        <td className="whitespace-nowrap px-3 pt-6 text-black flex-shrink-0 font-heading_bold font-semibold text-4xl tracking-[0.566667px] leading-[.95] uppercase">scènes</td>
                                     </tr>
                                 </tbody>
                             </table>
