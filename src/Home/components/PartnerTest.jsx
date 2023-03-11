@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/prop-types */
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
@@ -5,19 +7,22 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import Loader from '../../components/Loader';
 import { SALON_ID, URL } from '../../utils/config';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import useMedia from '../../utils/useMedia';
 
 function Arrow(props) {
     const { onClick, type } = props;
     let className = type === 'next' ? 'nextArrow' : 'prevArrow';
     className += ' arrow z-50';
-    const char = type === 'next' ? <HiOutlineChevronRight /> : <HiOutlineChevronLeft />;
+    const char = type === 'next' ? <FontAwesomeIcon icon={faChevronRight} /> : <FontAwesomeIcon icon={faChevronLeft} />;
     return (
         <div
             className={className}
@@ -32,6 +37,8 @@ export default function PartnerTest() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [partners, setPartners] = useState([]);
+
+    const isDesktop = useMedia('(min-width: 900px)');
 
     useEffect(() => {
         const options = {
@@ -95,7 +102,7 @@ export default function PartnerTest() {
             {
                 breakpoint: 480,
                 settings:   {
-                    slidesToShow:   1,
+                    slidesToShow:   2,
                     slidesToScroll: 1,
                 },
             },
@@ -120,14 +127,14 @@ export default function PartnerTest() {
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
                         <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
                             <div className="mx-auto w-full max-w-xl lg:mx-0">
-                                <h2 className="text-4xl font-bold tracking-tight text-gray-900 uppercase w-56 font-heading_bold">Nos partenaires majeurs</h2>
+                                <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 uppercase w-56 font-heading_bold">Nos partenaires majeurs</h2>
                             </div>
-                            <div className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
+                            <div className="mx-auto grid w-full max-w-xl grid-cols-2 justify-items-center items-center gap-y-6 lg:mx-0 lg:max-w-none lg:pl-8">
                                 {partners.map((value) => {
                                     if (value.sponsors === true) {
                                         return (
                                             <img
-                                                className="w-auto h-52 border"
+                                                className="w-auto h-32 lg:h-52 border"
                                                 src={URL + value.image}
                                                 alt="Tuple"
                                                 width={105}
@@ -143,9 +150,9 @@ export default function PartnerTest() {
                     </div>
                 </div>
 
-                <div className="bg-white py-12">
+                <div className="bg-white py-2 lg:py-12">
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                        <div className="grid grid-cols-3 gap-4">
+                        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
                             <div className="col-span-2">
                                 {numberOfFalseElements <= 3 ? (
                                     <div className="mx-auto grid w-full max-w-xl grid-cols-3 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
@@ -153,7 +160,7 @@ export default function PartnerTest() {
                                             if (value.sponsors === false) {
                                                 return (
                                                     <img
-                                                        className="px-6 h-24 w-auto"
+                                                        className="px-6 h-16 lg:h-24 w-auto"
                                                         src={URL + value.image}
                                                         alt="Tuple"
                                                         width={105}
@@ -185,15 +192,28 @@ export default function PartnerTest() {
                                 )}
 
                             </div>
-                            <div className="flex justify-end items-center">
+                            {isDesktop && (
+                                <div className="flex justify-end items-center">
+                                    <Link
+                                        to="partenaires"
+                                        className="inline-flex items-center rounded-md border border-transparent bg-orange-500 px-4 py-2 text-base font-medium text-white uppercase shadow-sm hover:bg-orange-600"
+                                    >
+                                        tous les partenaires
+                                    </Link>
+                                </div>
+
+                            )}
+                        </div>
+                        {!isDesktop && (
+                            <div className="py-10 lg:py-0 flex justify-center items-center">
                                 <Link
                                     to="partenaires"
-                                    className="inline-flex items-center rounded-md border border-transparent bg-orange-600 px-4 py-2 text-base font-medium text-white uppercase shadow-sm hover:bg-orange-700"
+                                    className="inline-flex items-center rounded-md border border-transparent bg-orange-500 px-4 py-2 text-base font-medium text-white uppercase shadow-sm hover:bg-orange-600"
                                 >
                                     tous les partenaires
                                 </Link>
                             </div>
-                        </div>
+                        )}
                     </div>
                 </div>
 

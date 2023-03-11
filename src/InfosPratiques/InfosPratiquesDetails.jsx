@@ -61,7 +61,7 @@ export default function InfosPratiquesDetails() {
                     <div
                         className="relative z-10 max-w-[1200px] w-[calc(100%-30px)] mx-auto h-full flex items-end"
                     >
-                        <h1 className="break-word inline-block text-[40px] mb-[50px] lg:mb-[80px] lg:text-[70px] text-white font-microgramma tracking-[0.566667px] leading-[.95] uppercase">
+                        <h1 className="break-word inline-block w-full text-[30px] mb-[50px] lg:mb-[80px] lg:text-[70px] text-white font-microgramma tracking-[0.566667px] leading-[.95] uppercase">
                             {details.name}
                         </h1>
                     </div>
@@ -79,7 +79,7 @@ export default function InfosPratiquesDetails() {
                 </section>
                 <section className="pb-10 bg-[#f3f3f3]">
                     <article className="relative">
-                        <div className="relative z-10 pt-[100px] pb-[95px] max-w-[800px] w-[calc(100%-30px)] mx-auto">
+                        <div className="relative z-10 pt-[100px] pb-[95px] w-full px-8 lg:px-0 overflow-x-hidden lg:max-w-[800px] lg:w-[calc(100%-30px)] mx-auto">
                             <div className="text-black" dangerouslySetInnerHTML={{ __html: details.content }} />
                         </div>
 

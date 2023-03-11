@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 /* eslint-disable no-mixed-operators */
 import React from 'react';
@@ -11,7 +12,7 @@ export default function MenuOverlay({ navbarOpen, setNavbarOpen }) {
     const { settings } = useSettings();
     return (
         <nav
-            className={`fixed flex top-0 left-0 w-full pt-20 z-30 h-screen bg-[url('/dist/images/pattern-dark.jpeg')] text-white bg-opacity-100 transform delay-100 transition-all duration-300 ${
+            className={`fixed flex top-0 left-0 w-full pt-20 z-30 h-full bg-[url('/dist/images/pattern-dark.jpeg')] text-white bg-opacity-100 transform delay-100 transition-all duration-300 ${
                 navbarOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full ease-linear'
             }`}
         >

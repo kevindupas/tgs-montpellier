@@ -1,8 +1,9 @@
+/* eslint-disable max-len */
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 /* eslint-disable react/no-danger */
 import React, { useEffect, useState } from 'react';
 import { Disclosure } from '@headlessui/react';
-// import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/outline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import _ from 'lodash';

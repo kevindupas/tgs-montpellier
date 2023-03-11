@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 import dayjs from 'dayjs';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { URL } from '../utils/config';
 
 export default function Card({ menuPosts }) {
@@ -13,14 +13,14 @@ export default function Card({ menuPosts }) {
                 if (value.published_at !== null && value.published_at < dayjs().format('YYYY-MM-DD H:s')) {
                     return (
 
-                        <Link className="mx-4 z-0" key={value.id} to={`/post/${value.id}`}>
+                        <NavLink className="mx-4 z-0" key={value.id} to={`/post/${value.id}`}>
                             <div className="news-card">
                                 <img src={URL + value.image} alt={value.name} className="news-card__image" />
                                 <div className="news-card__text-wrapper w-full">
                                     <h2 className="news-card__title">{value.name}</h2>
                                     <div className="news-card__post-date">{value.tag.name}</div>
                                     <div className="news-card__details-wrapper z-50">
-                                        <p className="news-card__excerpt">
+                                        <div className="news-card__excerpt">
                                             <div className="flex space-x-4 mt-4">
                                                 {
                                                     value.facebook !== null && (
@@ -176,7 +176,7 @@ export default function Card({ menuPosts }) {
                                                             </a>
                                                         </li> */}
                                             </div>
-                                        </p>
+                                        </div>
                                         <Link className="news-card__read-more bg-black hover:bg-orange-500 text-orange-500 hover:text-black" to={`/post/${value.id}`}>
                                             En savoir plus
                                             <i className="fas fa-long-arrow-alt-right text-orange-600" />
@@ -184,7 +184,7 @@ export default function Card({ menuPosts }) {
                                     </div>
                                 </div>
                             </div>
-                        </Link>
+                        </NavLink>
 
                     );
                 }

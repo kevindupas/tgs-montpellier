@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/no-absolute-path */
@@ -22,43 +23,45 @@ import ReactElasticCarousel from '@itseasy21/react-elastic-carousel';
 // }
 
 const breakPoints = [
-    {
-        width:       1,
-        itemsToShow: 1,
-    },
-    {
-        width:       550,
-        itemsToShow: 2,
-    },
-    {
-        width:       768,
-        itemsToShow: 3,
-    },
-    {
-        width:       1200,
-        itemsToShow: 6,
-    },
+  {
+    width: 1,
+    itemsToShow: 1,
+  },
+  {
+    width: 550,
+    itemsToShow: 2,
+  },
+  {
+    width: 768,
+    itemsToShow: 3,
+  },
+  {
+    width: 1200,
+    itemsToShow: 6,
+  },
 ];
 
-const Carousel = ({
-    children,
-    wheel,
-    wheelScroll,
-}) => (
+function Carousel({
+  children,
+  wheel,
+  wheelScroll,
+}) {
+  return (
     <ReactElasticCarousel
         // renderArrow={myArrow}
-        breakPoints={breakPoints}
-        showArrows
-        // enableSwipe
-        // enableMouseSwipe
-        // preventDefaultTouchmoveEvent
-        wheel={wheel}
-        wheelScroll={wheelScroll}
-        pagination={false}
-        isRTL={false}
+      breakPoints={breakPoints}
+      showArrows
+      enableSwipe
+      enableMouseSwipe={false}
+      preventDefaultTouchmoveEvent={false}
+      wheel={wheel}
+      wheelScroll={wheelScroll}
+      pagination={false}
+      isRTL={false}
     >
-        {children}
+      {children}
     </ReactElasticCarousel>
-);
+  );
+}
 
 export default Carousel;

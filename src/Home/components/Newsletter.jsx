@@ -36,7 +36,7 @@ export default function Newsletter() {
         <div className="bg-orange-700">
             <div className="max-w-[1400px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center">
                 <div className="lg:w-0 lg:flex-1">
-                    <h2 className="text-4xl text-white font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">Newsletters</h2>
+                    <h2 className="text-3xl lg:text-4xl text-white font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">Newsletters</h2>
                     <p className="mt-3 max-w-3xl font-bold text-lg leading-6 text-gray-300">Pour rester toujours au courant !</p>
                 </div>
                 <div className="mt-8 lg:mt-0 lg:ml-8">

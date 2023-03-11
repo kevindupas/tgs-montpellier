@@ -28,7 +28,7 @@ function Header({
                         )
                     }
                     <div
-                        className="space-x-24 flex justify-center items-center font-tungstenb_semibold font-medium uppercase"
+                        className=" space-x-0 lg:space-x-24 flex justify-center items-center font-tungstenb_semibold font-medium uppercase"
                     >
                         {
                             navbarOpen

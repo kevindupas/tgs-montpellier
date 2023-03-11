@@ -15,9 +15,12 @@ import PartnerTest from './components/PartnerTest';
 import ProgrammeTest from './components/ProgrammeTest';
 import { INVITE_CATEGORY, SALON_ID } from '../utils/config';
 import InviteTest from './components/InviteTest';
+import useMedia from '../utils/useMedia';
+import SalonMobile from './components/SalonMobile';
 
 export default function Home() {
     // const { settings } = useSettings();
+    const isDesktop = useMedia('(min-width: 900px)');
 
     // const [allPartner, setAllPartner] = useState(settings);
     return (
@@ -34,7 +37,7 @@ export default function Home() {
                     salon={SALON_ID}
                     limit={5}
                 />
-                <Salon />
+                {isDesktop ? <Salon /> : <SalonMobile /> }
                 <ProgrammeTest
                     category={2}
                     salon={SALON_ID}
@@ -42,7 +45,7 @@ export default function Home() {
                 />
                 <Words />
                 <TicketsHome />
-                <Infos />
+                {isDesktop && <Infos /> }
                 <PartnerTest />
                 <AllSalon />
                 <Newsletter />

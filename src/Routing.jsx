@@ -1,9 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { useState } from 'react';
-import {
-    BrowserRouter,
-    Route,
-    Routes,
-} from 'react-router-dom';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import MenuOverlay from './components/MenuOverlay';
@@ -19,11 +17,16 @@ import ArticlesDetails from './Articles/ArticlesDetails';
 import Cookie from './components/Cookie';
 import Billetterie from './Billetterie/Billetterie';
 import {
-    BILLETTERIE_CATEGORY, EXPOSANT_CATEGORY, FAQ_CATEGORY, INFOS_PRATIQUES_CATEGORY, INVITE_CATEGORY, MOSAIC_CATEGORY, PARTENAIRE_CATEGORY, PROGRAMME_CATEGORY,
+    BILLETTERIE_CATEGORY,
+    EXPOSANT_CATEGORY,
+    FAQ_CATEGORY,
+    INFOS_PRATIQUES_CATEGORY,
+    INVITE_CATEGORY,
+    PARTENAIRE_CATEGORY,
+    PROGRAMME_CATEGORY,
 } from './utils/config';
 import MentionLegale from './Terms/MentionLegale';
 import ConditionGeneral from './Terms/ConditionGeneral';
-import Mosaic from './Mosaic/Mosaic';
 import FaqWithSearch from './Faq/FaqWithSearch';
 import Presse from './Presse/Presse';
 
@@ -105,16 +108,6 @@ export default function Routing() {
                         <InfosPratiques
                             categories={INFOS_PRATIQUES_CATEGORY}
                             categoryName="Infos Pratiques"
-                        />
-                    )}
-                />
-
-                <Route
-                    path="mosaic"
-                    element={(
-                        <Mosaic
-                            categories={MOSAIC_CATEGORY}
-                            categoryName="Gallerie photo"
                         />
                     )}
                 />

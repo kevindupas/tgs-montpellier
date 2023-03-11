@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable no-unused-vars */
@@ -39,37 +41,12 @@ export default function ProgrammeTest({
     // TODO: Modifier les nombres dans l'admin salon
         <section className="relative w-full py-16 bg-[#f3f3f3]">
 
-            <div className="max-w-[1200px] w-[calc(100%-30px)] mx-auto flex justify-start items-start flex-wrap">
+            <div className="lg:max-w-[1200px] lg:w-[calc(100%-30px)] mx-auto flex justify-start items-start flex-wrap">
 
                 <div className="mx-auto max-w-2xl mb-10">
-                    <h1 className="mb-2 text-center font-heading_bold text-[40px] lg:text-[48px] tracking-[0.566667px] leading-[.95] uppercase text-black">Programmes</h1>
+                    <h1 className="mb-2 text-center font-heading_bold text-[27px] lg:text-[48px] tracking-[0.566667px] leading-[.95] uppercase text-black">Programmes</h1>
                     <hr className="relative lg:left-0 w-[calc(100% + 130px)]" />
                 </div>
-                {/* <div className="mx-auto">
-
-                        <div className="mr-0 relative z-10 text-white">
-
-                            <h1 className="mb-2 text-center font-microgramma text-[40px] lg:text-[54px] tracking-[0.566667px] leading-[.95] uppercase">Invités</h1>
-                            <hr className="relative lg:left-0 w-[calc(100% + 130px)] my-4" />
-                            <table className="min-w-full justify-center items-center">
-                                <tbody>
-                                    <tr>
-                                        <td className="whitespace-nowrap py-4 pl-4 pr-3 text-right text-sm font-medium text-gray-900 sm:pl-6 artiste text-[40px] lg:text-[68px] font-microgramma tracking-[0.566667px] leading-[.95] uppercase">{ settings.halls }</td>
-                                        <td className="whitespace-nowrap px-3 py-4 pt-[25px] text-sm text-white flex-shrink-0 font-tungstenb_semibold font-semibold text-[45px] tracking-[0.566667px] leading-[.95] uppercase">halls</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-
-                        <div className="py-[30px] lg:py-[43px] flex justify-center items-center">
-                            <Link to="invites" className="inline-block text-center cursor-pointer bg-white py-5 px-11">
-                                <span className="text-black uppercase font-semibold">Liste complète</span>
-                                {' '}
-                            </Link>
-                        </div>
-
-                    </div> */}
                 <div
                     className="w-full lg:w-full h-full flex mx-auto justify-center items-center relative"
                 >

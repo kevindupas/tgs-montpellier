@@ -55,9 +55,9 @@ export default function TicketsHome() {
     if (prices) {
         return (
             <div className="overflow-hidden bg-[#f3f3f3] bg-repeat">
-                <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto py-6 lg:py-24 px-4 sm:px-6 lg:px-8">
                     <div className="sm:flex sm:flex-col sm:align-center">
-                        <h1 className="text-3xl font-extrabold text-black sm:text-center uppercase font-heading_bold">
+                        <h1 className="text-2xl lg:text-3xl font-extrabold text-black text-center uppercase font-heading_bold">
                             Achetez vos billets dès
                             maintenant !
                         </h1>

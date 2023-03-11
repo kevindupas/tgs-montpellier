@@ -55,7 +55,7 @@ export default function AllSalon() {
                             <h2 className="text-4xl text-black font-bold font-heading_bold tracking-[0.566667px] leading-[.95] uppercase">Nos events</h2>
                             <p className="text-xl text-gray-700 font-bold">Retrouvez nos autres salons.</p>
                         </div>
-                        <div className="mx-auto grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-3">
+                        <div className="mx-auto grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-3">
                             {allSalon.map((value) => {
                                 if (value.name !== 'TGS Montpellier') {
                                     return (

@@ -52,14 +52,14 @@ export default function CategoryImage({ categoryId, categoryName }) {
                 <div className="absolute bottom-0 left-0 m-auto right-0 top-0">
                     <div className="w-full h-full relative overflow-hidden">
                         {category.id === categoryId ? (
-                            <img src={URL + category.image} alt="" className="w-full h-full object-cover" />
+                            <img src={URL + category.image} alt="" className="w-full h-full object-cover blur-[3px] lg:blur-none" />
 
                         )
                             : <Loader />}
                     </div>
                 </div>
                 <div className="relative z-10 pb-[40px] lg:pb-[69px] max-w-[1200px] w-[calc(100%-30px)] mx-auto h-full justify-end flex-col flex">
-                    <h1 className="font-microgramma text-white text-[56px] lg:text-[96px] tracking-[0.566667px] leading-[.95] uppercase">{categoryName}</h1>
+                    <h1 className="font-microgramma text-white text-[30px] lg:text-[96px] tracking-[0.566667px] leading-[.95] uppercase">{categoryName}</h1>
                 </div>
             </section>
         );

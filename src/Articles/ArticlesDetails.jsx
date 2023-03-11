@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-shadow */
@@ -106,7 +107,7 @@ export default function ArticlesDetails() {
     if (details) {
         return (
             <div className="bg-[#f3f3f3]">
-                <section className="overflow-hidden pb-6">
+                <section className="overflow-hidden pb-0 lg:pb-6">
                     <div className="max-w-[1200px] w-[calc(100%-30px)] mx-auto">
                         <div className="relative mt-[76px]">
                             <div className="ml-[-20px] lg:ml-auto w-[calc(100%+40px)] lg:w-[75%] mr-[-118px] overflow-hidden">
@@ -280,12 +281,12 @@ export default function ArticlesDetails() {
 
                 </section>
                 <section className="pb-2 bg-white">
-                    <div className="flex w-full lg:max-w-[1200px] lg:w-[calc(100%-30px)] mx-auto">
+                    <div className="flex-none lg:flex w-full lg:max-w-[1200px] lg:w-[calc(100%-30px)] lg:mx-auto">
 
                         {details.plannings.map((planning) => (
                             planning.salon_id === SALON_ID
                                 ? (
-                                    <div className="w-96 h-full bg-white mt-9 border border-gray-400 shadow-lg rounded-lg">
+                                    <div className="w-full lg:w-96 h-full bg-white mt-9 border border-gray-400 shadow-lg rounded-lg">
                                         <div className="relative p-6 space-y-6 lg:p-8">
                                             <h3 className="text-3xl text-center text-orange-500 uppercase font-bold underline">Infos planning</h3>
                                             <div />
