@@ -10,7 +10,7 @@ export default function Video({
 
     return (
         <section className="relative h-[calc(100vh-80px)]">
-            <div className="absolute lg:right-0 bottom-48 lg:bottom-12 z-20">
+            <div className="absolute lg:right-0 bottom-48 xl:right-16  lg:bottom-12 z-20">
                 <blockquote className="text-white font-heading_bold tracking-[0.566667px] leading-[.95] indent-0 uppercase text-5xl lg:text-5xl fix-width border-l-[15px] border-orange-500 pl-5 py-4 relative">
                     <span
                         className="drop-shadow-2xl"
