@@ -142,9 +142,9 @@ export default function ArticlesDetails() {
                                     {
                                         details.facebook !== null && (
                                             <li>
-                                                <a href={details.facebook} className="text-gray-400 hover:text-gray-500">
+                                                <a href={details.facebook} target="_blank" className="text-gray-400 hover:text-gray-500">
                                                     <span className="sr-only">LinkedIn</span>
-                                                    <img className="w-7 h-auto" src="../dist/icons/facebook.svg" alt="" />
+                                                    <img className="w-7 h-auto" src="../dist/icons/facebook_article.png" alt="" />
                                                 </a>
                                             </li>
                                         )
@@ -160,7 +160,7 @@ export default function ArticlesDetails() {
                                                     rel="noreferrer"
                                                 >
                                                     <div className="flex items-center w-full h-auto">
-                                                        <img className="w-10 h-auto" src="../dist/icons/twitter.svg" alt="" />
+                                                        <img className="w-10 h-auto" src="../dist/icons/twitter_article.png" alt="" />
                                                     </div>
                                                 </a>
                                             </li>
@@ -177,7 +177,7 @@ export default function ArticlesDetails() {
                                                     rel="noreferrer"
                                                 >
                                                     <div className="flex items-center w-full h-auto">
-                                                        <img className="w-9 h-auto" src="../dist/icons/youtube.svg" alt="" />
+                                                        <img className="w-9 h-auto" src="../dist/icons/youtube_article.png" alt="" />
                                                     </div>
                                                 </a>
                                             </li>
@@ -194,7 +194,7 @@ export default function ArticlesDetails() {
                                                     rel="noreferrer"
                                                 >
                                                     <div className="flex items-center w-full h-auto">
-                                                        <img className="w-7 h-auto" src="../dist/icons/instagram.svg" alt="" />
+                                                        <img className="w-7 h-auto" src="../dist/icons/instagram_article.png" alt="" />
                                                     </div>
                                                 </a>
                                             </li>
@@ -210,7 +210,7 @@ export default function ArticlesDetails() {
                                                 rel="noreferrer"
                                             >
                                                 <div className="flex items-center w-10 h-auto">
-                                                    <img className="w-7 h-auto" src="../dist/icons/twitch.svg" alt="" />
+                                                    <img className="w-7 h-auto" src="../dist/icons/twitch_article.png" alt="" />
                                                 </div>
                                             </a>
                                         </li>
@@ -225,7 +225,7 @@ export default function ArticlesDetails() {
                                                 rel="noreferrer"
                                             >
                                                 <div className="flex items-center w-8 mt-1 h-auto">
-                                                    <img className="w-8 h-auto" src="../dist/icons/wikipedia.svg" alt="" />
+                                                    <img className="w-8 h-auto" src="../dist/icons/wikipedia_article.png" alt="" />
                                                 </div>
                                             </a>
                                         </li>
@@ -233,8 +233,8 @@ export default function ArticlesDetails() {
 
                                     { details.website !== null && (
                                         <li>
-                                            <a href={details.website} className="text-gray-400 hover:text-gray-500">
-                                                <span className="sr-only">LinkedIn</span>
+                                            <a href={details.website} target="_blank" className="text-gray-400 hover:text-gray-500">
+                                                <span className="sr-only">Website</span>
                                                 <img className="w-7 h-auto" src="../dist/icons/web.svg" alt="" />
                                             </a>
                                         </li>
@@ -249,7 +249,7 @@ export default function ArticlesDetails() {
                                                 rel="noreferrer"
                                             >
                                                 <div className="flex items-center w-7 h-auto">
-                                                    <img className="w-6 h-auto" src="../dist/icons/tiktok.svg" alt="" />
+                                                    <img className="w-6 h-auto" src="../dist/icons/tiktok_article.png" alt="" />
                                                 </div>
                                             </a>
                                         </li>
