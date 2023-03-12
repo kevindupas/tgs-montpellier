@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 import React, { useState } from 'react';
-import clsx from 'clsx';
 import Video from './components/Video';
-import InvitesHome from './components/InvitesHome';
+import VideoMobile from './components/VideoMobile';
 import Countdown from './components/Countdown';
 import Salon from './components/Salon';
 import Words from './components/Words';
@@ -27,10 +26,15 @@ export default function Home() {
     return (
         <div className="bg-[url('/dist/images/pattern-dark.jpeg')] bg-repeat h-full w-full">
             <main className="block">
-                <Video
-                    className="object-cover h-full w-full pt-[5em]"
-                    source="/dist/video/new_video_montpellier.webm"
-                />
+                {isDesktop
+                    ? (
+                        <Video
+                            className="object-cover h-full w-full pt-[5em]"
+                            source="/dist/video/new_video_montpellier.webm"
+                        />
+                    )
+
+                    : <VideoMobile /> }
                 <Countdown />
                 <InformationTest />
                 <InviteTest

@@ -2,14 +2,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import { useSettings } from '../../context/SettingContext';
-import useMedia from '../../utils/useMedia';
 
 export default function Video({
     className,
     source,
 }) {
     const { settings } = useSettings();
-    const isDesktop = useMedia('(min-width: 900px)');
 
     return (
         <section className="relative h-[calc(100vh-80px)]">
@@ -40,40 +38,21 @@ export default function Video({
                 />
             </div>
             <div
-                className="absolute bottom-0 left-0 mx-auto top-0 right-[calc(50%-150px)] md:right-[calc(50%-300px)] lg:right-[calc(50%-516px)]"
+                className="absolute bottom-0 left-0 mx-auto top-0 md:right-[calc(50%-300px)] lg:right-[calc(50%-516px)]"
             >
-                {isDesktop ? (
 
-                    <div className="relative h-full w-full blur-[3px] lg:blur-none">
-                        <video
-                            loop
-                            muted
-                            autoPlay
-                            playsInline
-                            src={source}
-                            className={className}
-                        />
-
-                    </div>
-
-                ) : (
-
-                    <div
-                        className="relative h-full w-full blur-[3px] lg:blur-none"
-                        dangerouslySetInnerHTML={{
-                            __html: `<video
-                                loop
-                                muted
-                                autoplay
-                                playsinline
-                                type="video/mp4"
-                                src='/dist/video/new_video_montpellier.mp4'
-                                class='object-cover h-full w-full pt-[5em]'
-                            />`,
-                        }}
+                <div className="relative h-full w-full blur-[3px] lg:blur-none">
+                    <video
+                        loop
+                        muted
+                        autoPlay
+                        playsInline
+                        src={source}
+                        className={className}
                     />
 
-                )}
+                </div>
+
             </div>
         </section>
     );
