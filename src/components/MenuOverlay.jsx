@@ -5,6 +5,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useMedia from '../utils/useMedia';
 import { useSettings } from '../context/SettingContext';
+import { URL } from '../utils/config';
 
 export default function MenuOverlay({ navbarOpen, setNavbarOpen }) {
     const isDesktop = useMedia('(min-width: 700px)');
@@ -52,16 +53,18 @@ export default function MenuOverlay({ navbarOpen, setNavbarOpen }) {
                                 </Link>
                             </li>
                             <li className="flex">
-                                <Link
-                                    to="/"
+                                <a
+                                    href={settings.plan_pdf !== '' ? URL + settings.plan_pdf : '#'}
+                                    target="_blank"
                                     className="relative flex text-[40px] lg:text-[68px] font-microgramma tracking-[0.566667px] leading-[.95] uppercase menu__item-link hover:text-orange-500"
                                     onClick={() => {
                                         setNavbarOpen(false);
                                     }}
+                                    rel="noreferrer"
                                 >
                                     plan
                                     du salon
-                                </Link>
+                                </a>
                             </li>
                             <li className="flex">
                                 <Link
@@ -75,28 +78,25 @@ export default function MenuOverlay({ navbarOpen, setNavbarOpen }) {
                                 </Link>
                             </li>
                             <li className="flex">
-                                <Link
-                                    to="/"
+                                <a
+                                    href={settings.planning_pdf !== '' ? URL + settings.planning_pdf : '#'}
+                                    target="_blank"
                                     className="relative flex text-[40px] lg:text-[68px] font-microgramma tracking-[0.566667px] leading-[.95] uppercase menu__item-link hover:text-orange-500"
                                     onClick={() => {
                                         setNavbarOpen(false);
                                     }}
+                                    rel="noreferrer"
                                 >
                                     planning
-                                </Link>
-                                <img className="menu__item-img" src="/dist/images/1.jpg" alt="" />
+                                </a>
                             </li>
                             <li className="flex">
                                 <Link
                                     to="billetterie"
                                     className="relative flex text-[40px] lg:text-[68px] font-microgramma tracking-[0.566667px] leading-[.95] uppercase menu__item-link hover:text-orange-500"
-                                    onClick={() => {
-                                        setNavbarOpen(false);
-                                    }}
                                 >
                                     billetterie
                                 </Link>
-                                {/* <img className="menu__item-img" src="/dist/images/1.jpg" alt="" /> */}
                             </li>
                         </ul>
                     )}
@@ -112,7 +112,6 @@ export default function MenuOverlay({ navbarOpen, setNavbarOpen }) {
                                 >
                                     Invités
                                 </Link>
-
                             </li>
                             <li className="flex">
                                 <Link

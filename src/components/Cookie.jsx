@@ -33,18 +33,16 @@ export default function Cookie({ storageKey, storageValue }) {
                         </div>
                         <div className="pb-4">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus aliquid aperiam beatae
-                                consectetur culpa dolores eum expedita, ipsam iure laboriosam nobis odit quos, sed sunt
-                                veritatis
-                                voluptas voluptate voluptatum!
+                                En poursuivant votre navigation, vous acceptez le dépôt de cookies tiers destinés à vous proposer des vidéos, des boutons de partage, des remontées de contenus de plateformes sociales
                             </p>
+                            <a href="https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies/que-dit-la-loi">En savoir plus</a>
                         </div>
                     </div>
 
                 </div>
 
                 <div className="w-full flex justify-center items-center border-t border-solid border-gray-200">
-                    <button onClick={close} type="button" className="border-r border-gray-200 flex-1 px-4 py-3 text-gray-500 hover:text-white hover:bg-orange-400 duration-150">
+                    <button onClick={close} type="button" className="border-r border-gray-200 flex-1 px-4 py-3 text-gray-500 hover:text-white hover:bg-red-400 duration-150">
                         Je refuse
                     </button>
                     <button onClick={close} type="button" className="flex-1 px-4 py-3 text-gray-500 hover:text-white hover:bg-green-400 duration-150">

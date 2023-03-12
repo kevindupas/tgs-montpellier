@@ -58,7 +58,7 @@ export default function Salon() {
                         </div>
                     </div>
                     <div className="mt-10 flex justify-center items-center">
-                        <a href="https://gallery.tgs-production.fr" target="_blank" className="inline-block text-center cursor-pointer py-5 px-11" rel="noreferrer">
+                        <a href="https://photos.tgs-montpellier.fr" target="_blank" className="inline-block text-center cursor-pointer py-5 px-11" rel="noreferrer">
                             <img
                                 className="h-56 overflow-hidden lg:max-w-max"
                                 src="/dist/icons/decouvrir.png"

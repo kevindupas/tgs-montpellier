@@ -24,7 +24,7 @@ export default function Informations() {
 
                     </Link>
 
-                    <a href={URL + settings.plan_pdf} target="_blank" className="w-full bg-orange-700 hover:bg-orange-900  rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center" rel="noreferrer">
+                    <a href={settings.plan_pdf !== '' ? URL + settings.plan_pdf : '#'} target="_blank" className="w-full bg-orange-700 hover:bg-orange-900  rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center" rel="noreferrer">
                         <div className="mb-8 hidden lg:block">
                             <i className="fa-solid fa-map-location-dot text-7xl text-white z-50" />
                         </div>
@@ -34,7 +34,7 @@ export default function Informations() {
 
                     </a>
 
-                    <a href={URL + settings.planning_pdf} target="_blank" className="w-full bg-orange-700 hover:bg-orange-900  rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center" rel="noreferrer">
+                    <a href={settings.planning_pdf !== '' ? URL + settings.planning_pdf : '#'} target="_blank" className="w-full bg-orange-700 hover:bg-orange-900  rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center" rel="noreferrer">
                         <div className="mb-8 hidden lg:block">
                             <i className="fa-regular fa-calendar-days text-7xl text-white" />
                         </div>
