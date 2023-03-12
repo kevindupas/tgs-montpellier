@@ -94,6 +94,9 @@ export default function MenuOverlay({ navbarOpen, setNavbarOpen }) {
                                 <Link
                                     to="billetterie"
                                     className="relative flex text-[40px] lg:text-[68px] font-microgramma tracking-[0.566667px] leading-[.95] uppercase menu__item-link hover:text-orange-500"
+                                    onClick={() => {
+                                        setNavbarOpen(false);
+                                    }}
                                 >
                                     billetterie
                                 </Link>
@@ -156,7 +159,6 @@ export default function MenuOverlay({ navbarOpen, setNavbarOpen }) {
                                 >
                                     billetterie
                                 </Link>
-                                <img className="menu__item-img" src="/dist/images/1.jpg" alt="" />
                             </li>
                         </ul>
                     )}
@@ -173,6 +175,9 @@ export default function MenuOverlay({ navbarOpen, setNavbarOpen }) {
                                     target="_blank"
                                     className="font-tungstenb_semibold font-semibold text-[40px] lg:text-[65px] leading-none uppercase artiste"
                                     rel="noreferrer"
+                                    onClick={() => {
+                                        setNavbarOpen(false);
+                                    }}
                                 >
                                     contact
                                 </a>
@@ -180,9 +185,11 @@ export default function MenuOverlay({ navbarOpen, setNavbarOpen }) {
                             <li className="relative footer-overlay">
                                 <Link
                                     to="presse"
-                                    target="_blank"
                                     className="font-tungstenb_semibold font-semibold text-[40px] lg:text-[65px] leading-none uppercase artiste"
                                     rel="noreferrer"
+                                    onClick={() => {
+                                        setNavbarOpen(false);
+                                    }}
                                 >
                                     presse
                                 </Link>
