@@ -82,7 +82,11 @@ function Footer() {
                     {' '}
                     {dayjs().year()}
                     {' '}
-                    TGS Evenements - All rights reserved.
+                    TGS EVENEMENTS - Tous droits réservés.
+                    <br />
+                    Design et Développement -
+                    {' '}
+                    <a href="https://kevindupas.com">Kévin Dupas</a>
                 </p>
             </div>
         </footer>
