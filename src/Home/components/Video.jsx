@@ -67,7 +67,7 @@ export default function Video({
                                 autoplay
                                 playsinline
                                 type="video/mp4"
-                                src='/dist/video/new_video_montpellier.webm'
+                                src='/dist/video/mobile.mp4'
                                 class='object-cover h-full w-full pt-[5em]'
                             />`,
                         }}
