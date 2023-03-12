@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 import React, { useState } from 'react';
+import clsx from 'clsx';
 import Video from './components/Video';
 import InvitesHome from './components/InvitesHome';
 import Countdown from './components/Countdown';

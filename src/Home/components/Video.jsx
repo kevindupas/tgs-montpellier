@@ -1,12 +1,15 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import { useSettings } from '../../context/SettingContext';
+import useMedia from '../../utils/useMedia';
 
 export default function Video({
     className,
     source,
 }) {
     const { settings } = useSettings();
+    const isDesktop = useMedia('(min-width: 900px)');
 
     return (
         <section className="relative h-[calc(100vh-80px)]">
@@ -39,16 +42,38 @@ export default function Video({
             <div
                 className="absolute bottom-0 left-0 mx-auto top-0 right-[calc(50%-150px)] md:right-[calc(50%-300px)] lg:right-[calc(50%-516px)]"
             >
-                <div className="relative h-full w-full blur-[3px] lg:blur-none">
-                    <video
-                        loop
-                        muted
-                        autoPlay
-                        playsInline
-                        src={source}
-                        className={className}
+                {isDesktop ? (
+
+                    <div className="relative h-full w-full blur-[3px] lg:blur-none">
+                        <video
+                            loop
+                            muted
+                            autoPlay
+                            playsInline
+                            src={source}
+                            className={className}
+                        />
+
+                    </div>
+
+                ) : (
+
+                    <div
+                        className="relative h-full w-full blur-[3px] lg:blur-none"
+                        dangerouslySetInnerHTML={{
+                            __html: `<video
+                                loop
+                                muted
+                                autoPlay
+                                playsInline
+                                type="video/mp4"
+                                src=${source}
+                                class='object-cover h-full w-full pt-[5em]'
+                            />`,
+                        }}
                     />
-                </div>
+
+                )}
             </div>
         </section>
     );
