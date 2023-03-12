@@ -65,7 +65,7 @@ export default function InfosPratiquesDetails() {
                             {details.name}
                         </h1>
                     </div>
-                    <div className="absolute bottom-0 left-0 top-0 m-auto right-10 lg:right-[120px] overflow-hidden">
+                    <div className="absolute bottom-0 left-0 top-0 m-auto right-0 lg:right-0 overflow-hidden">
                         <div
                             className="w-full h-full relative overflow-hidden"
                         >
