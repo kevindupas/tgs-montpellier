@@ -64,8 +64,8 @@ export default function Video({
                             __html: `<video
                                 loop
                                 muted
-                                autoPlay
-                                playsInline
+                                autoplay
+                                playsinline
                                 type="video/mp4"
                                 src=${source}
                                 class='object-cover h-full w-full pt-[5em]'
